@@ -1,0 +1,498 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+.home_main_div {
+  background-image: url("../images/home.jpeg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_text {
+  font-size: 93px;
+  font-weight: 700;
+  text-align: center;
+  -webkit-text-stroke: 3px white;
+}
+.home_text p:nth-child(3) {
+  font-size: 110px;
+  font-weight: 800;
+}
+.main_div {
+  background-image: url("../images/lottery_bg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pxwell {
+  -webkit-text-stroke: 2px #fff;
+}
+
+/*-------   priyanka----------*/
+.draw {
+  position: relative;
+}
+.draw img {
+  width: 600px;
+  height: 60px;
+}
+
+.draw-1 {
+  position: relative;
+}
+
+.draw_text1 {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  font-weight: 800;
+  color: #e20608;
+  text-align: center;
+}
+
+.draw_text2 {
+  position: absolute;
+  /* top: 71px; */
+  bottom: 6px;
+  left: 0;
+  right: 0px;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.prize {
+  background-color: #ec1300;
+  width: 111%;
+  height: 99%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: relative;
+}
+
+.first {
+  position: absolute;
+  top: 110px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.prize_number {
+  position: absolute;
+  margin-bottom: 4px;
+  font-size: 39px;
+  font-weight: 900;
+}
+.pri,
+.digit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar_full {
+  width: 12rem;
+}
+.sidebar_half {
+  width: 3rem;
+}
+.prize_text h4 {
+  font-size: 44px;
+  font-weight: 700;
+  position: relative;
+  top: 183px;
+  left: 46px;
+}
+.digit h3 {
+  text-align: center;
+  position: absolute;
+  top: 49%;
+  /* left: 26px; */
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #040302;
+  -webkit-text-stroke: 1px #fff;
+}
+.pri h2 {
+  text-align: center;
+  position: absolute;
+  top: 32%;
+  /* left: 10px; */
+  font-size: 55px;
+  font-weight: 700;
+  color: #67cbcb;
+  text-transform: capitalize;
+}
+.px-2 h2 {
+  font-size: 67px;
+  font-weight: 700;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 15px;
+  -webkit-text-stroke: 1px #fff;
+  padding: 0px 0px;
+}
+.oval_div {
+  width: 130px;
+}
+
+/*----------  ---------*/
+
+.lottery {
+  height: 60px;
+  width: 500px;
+}
+.prize {
+  -webkit-text-stroke: 1px #fff;
+}
+
+.curve {
+  border-radius: 50% 50% 47% 53% / 52% 54% 46% 48%;
+  width: 159px;
+}
+.logo {
+  height: 27px;
+  width: 20px;
+}
+.bottom_logo {
+  height: 50px;
+  width: 70px;
+}
+.colorChange {
+  color: yellow;
+}
+.word {
+  width: 90%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 45%;
+  text-align: center;
+}
+.word span {
+  display: inline-block;
+  position: relative;
+  /* transform: translateY(-400px); */
+  transform: translateY(-425px);
+  animation: fall 2s forwards, jump 0.6s ease-in-out forwards;
+  animation-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+}
+.middle_text_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.fall_blink_text {
+  /* height: 447px; */
+  height: 280px;
+}
+
+/* Keyframes for fall */
+@keyframes fall {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for jump */
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+  35% {
+    transform: translateY(-12px) scaleY(1);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0) scaleY(0.5);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+}
+
+.blink {
+  animation: blinks 1.2s linear infinite;
+}
+
+@keyframes blinks {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Applying staggered animation delays */
+.word span:nth-child(1) {
+  animation-delay: 0s, 1.8s;
+}
+
+.word span:nth-child(2) {
+  animation-delay: 0.5s, 2.5s;
+}
+
+.word span:nth-child(3) {
+  animation-delay: 1s, 3s;
+}
+
+.word span:nth-child(4) {
+  animation-delay: 1.5s, 3.5s;
+}
+
+.word span:nth-child(5) {
+  animation-delay: 2s, 4s;
+}
+
+.word span:nth-child(6) {
+  animation-delay: 2.5s, 4.5s;
+}
+
+/*-------------------*/
+.secoundPrizeNo {
+  color: red;
+  -webkit-text-stroke: 2px #fff;
+  font-size: 150px;
+  font-weight: 900;
+  margin-top: -50px;
+}
+.nd {
+  font-size: 90px;
+}
+.number {
+  font-size: 180px;
+}
+.bottom_text {
+  color: green;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+/****  typing text home start ******/
+.typing_text_main_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dynamik_text li span {
+  position: relative;
+}
+
+.dynamik_text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  animation: typess 7.5s steps(35) forwards;
+}
+
+@keyframes typess {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+/*---- typing text 2nd page  ------*/
+.typing_text_2_main_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 155px;
+  font-weight: 800;
+  color: white;
+  height: 127px;
+  text-align: center;
+  /* width: 699px; */
+}
+
+.dynamik_text2 li span {
+  position: relative;
+}
+
+.dynamik_text2 li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background: #000;
+  animation: types2 2.5s steps(35) forwards;
+}
+@keyframes types2 {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+/*----- live next draw falling ------*/
+.nextDraw {
+  /* width: 90%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 45%; */
+  color: #00007a;
+  -webkit-text-stroke: 2px #fff;
+  font-size: 70px;
+  font-weight: 900;
+  text-align: center;
+  overflow: hidden;
+}
+.nextDraw span {
+  display: inline-block;
+  position: relative;
+  transform: translateY(-400px);
+  animation: fallNextDraw 3s infinite;
+  animation-timing-function: cubic-bezier(0.1, 0.2, 0.4, 1);
+}
+
+/* Keyframes for fall */
+@keyframes fallNextDraw {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*--- line create animation---*/
+.line {
+  position: relative;
+  height: 10px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #000;
+  margin-top: 8px;
+}
+.line::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: blue;
+  border-radius: 10px;
+  transform-origin: left;
+  animation: animate 1s linear forwards;
+  left: 0;
+}
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+  }
+}
+/*  */
+.bottom_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 800;
+  color: green;
+  height: 147px;
+  /* width: 699px; */
+}
+
+.bottom_text li span {
+  position: relative;
+  font-size: 50px;
+}
+
+.dynamik_text_bottom li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  background: #000;
+  animation: typesBottom 6.5s steps(45) forwards;
+}
+@keyframes typesBottom {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+/*-------- secound result slot machine design ----------------*/
+
+.second_inner {
+  width: 53%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.slot_machines {
+  width: 50%;
+  display: flex;
+  padding: 4px;
+}
+.third_inner {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 105px;
+}
+.slot_machines_third {
+  width: 27%;
+  display: flex;
+  padding: 4px;
+}
+.fourth_inner {
+  /* width: 53%; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.slot_machines_fourth {
+  /* width: 50%; */
+  display: flex;
+  padding: 4px 1px;
+}
+
+/********************* table.css *****************/
+.hZUxNm {
+  font-size: 16px;
+}
+.dVFlIL {
+  width: 80% !important;
+}

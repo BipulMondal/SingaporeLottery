@@ -1,0 +1,745 @@
+/* ###########################################*/
+/* =============== Responsive Css ============*/
+/* ###########################################*/
+
+@media (max-width: 640px) {
+  .main_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .home_text {
+    font-size: 60px;
+    font-weight: 600;
+    -webkit-text-stroke: 1px white;
+  }
+  .home_text p:nth-child(3) {
+    font-size: 90px;
+  }
+  .lottery {
+    width: 353px;
+  }
+  .top_left {
+    font-size: 10px;
+  }
+  .top_right {
+    font-size: 8.5px;
+  }
+  .main_middle {
+    width: 100%;
+    /* height: 42%; */
+    height: 50%;
+  }
+  .pxwell_main_parent {
+    margin-left: 0;
+    margin-right: 3px;
+    width: 32px;
+  }
+  .pxwell_main {
+    font-size: 1.5rem;
+  }
+  .curve {
+    /* width: 77px; */
+    width: 63px;
+  }
+  .curve img {
+    height: 2rem;
+    width: 2rem;
+  }
+  .curve p:first-of-type {
+    font-size: 19px;
+  }
+  .curve p:not(:first-of-type) {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .prize {
+    -webkit-text-stroke: 0.3px #fff;
+  }
+  /*----------------------*/
+  .middle_text_area {
+    padding: 0;
+  }
+  .typing_text_main_div {
+    font-size: 18px;
+    margin-top: 17px;
+  }
+  .blink_text {
+    font-size: 50px;
+  }
+  .word {
+    /* top: 27%; */
+    top: 45%;
+    left: 42%;
+  }
+  .word span {
+    transform: translateY(-450px);
+  }
+
+  .fall_blink_text {
+    /* height: 190px; */
+    height: 270px;
+  }
+  .number_main_div {
+    margin-top: 40;
+  }
+  .count_number {
+    font-size: 3.5rem;
+    height: 59px;
+    width: 4.5rem;
+  }
+  .draw_date_time {
+    font-size: 10px;
+    width: 150px;
+  }
+  .main_page_wheel {
+    height: 41vh;
+  }
+  .bottom_div {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /*------------ main home css end here -------------*/
+
+  /*------------ wheel page css start here -------------*/
+  .wheel_main {
+    /* height: 41vh; */
+  }
+  .main_spin {
+    width: 50%;
+  }
+  .arrow,
+  .letter_Arrow {
+    /* left: 40%; */
+    left: 34%;
+    border-top: 23px solid red;
+  }
+  .circle_hr {
+    left: 31%;
+  }
+  .circle,
+  .letter-circle {
+    width: 90px;
+    height: 90px;
+    padding: 0;
+    /* margin: 17px; */
+    margin: 17px 6px;
+  }
+  .okk,
+  .letter_okk {
+    width: 90px;
+    height: 90px;
+  }
+  .okk {
+    rotate: 5deg;
+  }
+  .text {
+    position: absolute;
+    left: -77%;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    transform: skewY(64deg) rotate(-8deg);
+    padding-top: 19px;
+    font-weight: bolder;
+    font-size: 8px;
+  }
+  .text,
+  .letter-text {
+    position: absolute;
+    left: -77%;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    padding-top: 19px;
+    font-weight: bolder;
+    font-size: 8px;
+  }
+  .black_border {
+    width: 2px;
+  }
+  .zoomed {
+    transform: scale(2.4);
+    margin-right: 0;
+  }
+  .slot_machine_top {
+    /* width: 130px; */
+    width: 100%;
+  }
+  .slot_component {
+    width: 57%;
+  }
+  .main_slot {
+    width: 155px;
+  }
+  /* .index-module_num__j6XH3 {
+    
+  } */
+
+  .index-module_slot_wrap__ZT-DX :nth-child(2),
+  .index-module_slot_wrap__ZT-DX :nth-child(3),
+  .index-module_slot_wrap__ZT-DX :nth-child(4),
+  .index-module_slot_wrap__ZT-DX :nth-child(5) {
+    margin-left: 5px;
+  }
+  .spin_top_line {
+    width: 87%;
+  }
+
+  .index-module_slot__DpPgW {
+    height: 35px !important;
+  }
+
+  .index-module_num__j6XH3 {
+    height: 35px;
+    line-height: 33px;
+    /* font-size: 15px;  its work for small screen */
+    font-size: 8px;
+  }
+
+  .logo_container {
+    transform: skewY(60deg) rotate(-55deg);
+    padding-top: 28px;
+  }
+  .logo_container img {
+    margin-left: 66px;
+    height: 8px;
+    width: 8px;
+  }
+  .slot_main_div {
+  }
+
+  /*---------  second page css ------------*/
+  .second_main_div, .third_main_div {
+    width: 100%;
+  }
+  .typing_text_2_main_div {
+    font-size: 95px;
+    height: 127px;
+    width: 100%;
+  }
+  .nextDraw {
+    -webkit-text-stroke: 1px #fff;
+    font-size: 42px;
+    font-weight: 900;
+  }
+  .secoundPrizeNo {
+    -webkit-text-stroke: 1px #fff;
+    font-size: 65px;
+    margin-top: 50px;
+  }
+  .number {
+    font-size: 150px;
+  }
+  .nd {
+    font-size: 70px;
+  }
+  .bottom_text {
+    width: 100%;
+  }
+  .bottom_text li span {
+    font-size: 26px;
+  }
+  .dynamik_text_bottom li span::after {
+    margin-top: 21px;
+  }
+  .live_draw_main {
+    margin-left: 0;
+  }
+  .live_draw {
+    font-size: 1.5rem;
+  }
+  .second_inner {
+    width: 100%;
+  }
+  .slot_machines {
+    padding: 2px;
+  }
+}
+@media (min-width: 641px) and (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .typing_text_main_div {
+    font-size: 36px;
+  }
+  .blink_text {
+    font-size: 103px;
+  }
+  .main_div_second {
+    padding-top: 5px;
+  }
+  .first img {
+    height: 47px;
+  }
+  .prize_number {
+    margin-bottom: -2px;
+    font-size: 39px;
+  }
+  .digit h3 {
+    font-size: 29px;
+  }
+
+  .draw_text1 {
+    font-size: 17px;
+    bottom: 24px;
+  }
+  .top_left,
+  .top_right {
+    font-size: 12px;
+  }
+  .pri h2 {
+    font-size: 45px;
+  }
+  .draw_date_time {
+    height: 60px;
+  }
+  .bottom_logo {
+    height: 70px;
+    width: 95px;
+  }
+  .word span {
+    transform: translateY(-558px);
+  }
+  .main_spin {
+    width: 34%;
+  }
+  /* .zoomed  {
+    transform: scale(3.2);
+    margin-right: 0;
+  } */
+}
+
+/*========== for mobile landscape mode responsive css ===============*/
+@media only screen and (max-width: 659px) and (orientation: landscape) {
+  .home_text {
+    font-size: 35px;
+    -webkit-text-stroke: 0.8px white;
+  }
+  .home_text p:nth-child(3) {
+    font-size: 65px;
+  }
+  .top_left {
+    font-size: 7px;
+  }
+  .top_left_uTube {
+    height: 33px !important;
+  }
+  .top_right_uTube {
+    height: 33px !important;
+    text-align: center;
+  }
+  .draw img {
+    width: 550px;
+    height: 40px;
+  }
+  .main_div_second {
+    margin-top: 6px;
+  }
+  .draw_text1 {
+    bottom: 17px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+  .draw_text2 {
+    bottom: 6px;
+    font-size: 6px;
+  }
+  .first {
+    top: 13px;
+  }
+  .first img {
+    height: 26px;
+    width: 30px;
+  }
+  .pri h2 {
+    top: 21%;
+    font-size: 22px;
+  }
+  .digit h3 {
+    top: 42%;
+    font-size: 12px;
+    -webkit-text-stroke: 0.1px white;
+  }
+  .prize_number {
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+  .main_middle {
+    height: 72%;
+    margin-top: 0;
+  }
+  .bottom_div {
+    margin: 3px 0px;
+  }
+  .draw_date_time {
+    height: 26px;
+  }
+  .bottom_logo {
+    height: 28px;
+    width: 40px;
+  }
+  .number_main_div {
+    margin-bottom: 10px;
+  }
+  .prize {
+    width: 90%;
+    margin-left: 2px;
+  }
+  .middle_text_area {
+    width: 100%;
+  }
+  .okk,
+  .letter_okk {
+    width: 85px;
+    height: 85px;
+  }
+  .spin_top_line {
+    width: 87%;
+  }
+  .circle,
+  .letter-circle {
+    width: 85px;
+    height: 85px;
+    margin: 12px 24px;
+  }
+  .logo_container img {
+    margin-left: 57px;
+  }
+  .arrow,
+  .letter_Arrow {
+    left: 37%;
+  }
+  .circle_hr {
+    left: 35.5%;
+  }
+  .text,
+  .letter-text {
+    font-size: 10px;
+  }
+  .slot_main_div {
+    padding: 3px;
+    width: 82%;
+  }
+  .slot_machine_top {
+    height: 40px;
+  }
+  .bg_gray_div {
+    height: 20px;
+  }
+
+  .index-module_num__j6XH3 {
+    height: 26px;
+    line-height: 20px;
+    font-size: 8px;
+  }
+
+  .index-module_slot__DpPgW {
+    height: 17px !important;
+    vertical-align: baseline;
+  }
+
+  .arrow,
+  .letter_Arrow {
+    border-top: 19px solid red;
+  }
+  .text,
+  .letter-text {
+    font-size: 8px;
+  }
+  .slot_machine_top {
+    width: 100%;
+  }
+  .typing_text_2_main_div {
+    font-size: 50px;
+  }
+  .nextDraw {
+    height: 150px;
+  }
+  .number {
+    font-size: 50px;
+  }
+  .nd {
+    font-size: 45px;
+  }
+  .secoundPrizeNo {
+    font-size: 45px;
+  }
+  .live_draw {
+    font-size: 1.2rem;
+  }
+  .pxwell_main {
+    font-size: 1.2rem;
+  }
+  .pxwell {
+    -webkit-text-stroke: 1.2px #fff;
+  }
+  .live_draw_main {
+    width: 33px;
+  }
+  .oval_div {
+    width: 100px;
+  }
+  .main_middle_second {
+    width: 30px;
+  }
+  .wheel_main_section {
+    width: 87vw;
+  }
+  .digits_dot {
+    font-size: 5px;
+  }
+  .index-module_slot_wrap__ZT-DX :nth-child(2),
+  .index-module_slot_wrap__ZT-DX :nth-child(3),
+  .index-module_slot_wrap__ZT-DX :nth-child(4),
+  .index-module_slot_wrap__ZT-DX :nth-child(5) {
+    margin-left: 2px;
+  }
+  .second_inner {
+    width: 53%;
+  }
+  .slot_machines_third  {
+    padding: 2px;
+  }
+  .slot_machines_fourth  {
+    padding: 2px;
+  }
+  .slot_component {
+    width: 57%;
+  }
+  .okk, .letter_okk {
+    margin: 2.5px auto;
+  }
+  .circle, .letter-circle {
+    width: 90px;
+    height: 90px;
+}
+}
+
+@media only screen and (min-width: 568px) and (max-width: 585px) and (orientation: landscape) {
+  .main_spin {
+    width: 40% !important;
+  }
+  .slot_component {
+    width: 65%;
+}
+}
+
+@media only screen and (min-width: 660px) and (max-width: 932px) and (orientation: landscape) {
+  .home_text {
+    font-size: 38px;
+    -webkit-text-stroke: 2px white;
+  }
+  .home_text p:nth-child(3) {
+    font-size: 100px;
+  }
+  .top_left {
+    font-size: 10px;
+    padding-top: 3px;
+  }
+  .top_right {
+    font-size: 10px;
+    padding-top: 7px;
+  }
+  .top_left_uTube,
+  .top_right_uTube {
+    width: 11rem;
+    height: 45px;
+  }
+  .main_middle {
+    height: 74vh;
+    margin-top: 6px;
+  }
+  .draw_text1 {
+    font-size: 13px;
+    bottom: 21px;
+  }
+  .draw img {
+    width: 370px;
+    height: 45px;
+  }
+  .draw_text2 {
+    font-size: 10px;
+    bottom: 5px;
+  }
+  .pxwell_main {
+    font-size: 26px;
+  }
+  .middle_text_area {
+    padding: 0;
+  }
+  .typing_text_main_div {
+    font-size: 38px;
+  }
+  .blink_text {
+    font-size: 72px;
+  }
+  .number_main_div {
+    margin-bottom: 7px;
+  }
+  .count_number {
+    height: 52px;
+    width: 60px;
+    font-size: 47px;
+  }
+  .first {
+    top: 21px;
+  }
+  .first img {
+    height: 30px;
+    width: 33px;
+  }
+  .prize_number {
+    margin-bottom: 2px;
+    font-size: 15px;
+  }
+  .pri h2 {
+    top: 20%;
+    font-size: 23px;
+  }
+  .digit h3 {
+    top: 39%;
+    font-size: 16px;
+  }
+  .prize {
+    margin-left: 7px;
+    width: 77%;
+  }
+  .live_draw_main {
+    margin-right: -10px;
+  }
+  .live_draw {
+    font-size: 26px;
+    margin-left: -14px;
+  }
+  .oval_div {
+    width: 100px;
+  }
+  .pexel_right {
+    /* margin-left: -19px;
+    margin-right: 23px; */
+  }
+  .main_middle_second {
+    width: 30px;
+  }
+  .pxwell_right_main {
+    margin-left: 0;
+  }
+  /************  for wheel spin */
+  .circle,
+  .letter-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .okk,
+  .letter_okk {
+    width: 90px;
+    height: 90px;
+    margin: -1px -1px;
+  }
+  .text {
+    padding-top: 8px;
+    font-size: 9px;
+  }
+  .letter-text {
+    padding-top: 12px;
+    font-size: 9px;
+  }
+  .arrow,
+  .letter_Arrow {
+    left: 45%;
+    border-top: 27px solid red;
+  }
+  .circle_hr {
+    left: 43%;
+  }
+
+  .logo {
+    height: 10px;
+    width: 10px;
+  }
+  .logo_container {
+    transform: skewY(60deg) rotate(-6deg);
+    padding-top: 15px;
+    
+  }
+  .logo_container img {
+    margin-left: 46px;
+  }
+  .main_div_second {
+    margin-top: 2px;
+  }
+  /*********** slot machine ***************/
+  .slot_machines,
+  .slot_machines_third {
+    padding: 2px;
+  }
+  .slot_machines_fourth {
+    padding: 2px;
+    width: 25%;
+  }
+  .slot_main_div {
+    padding: 3px;
+  }
+  .slot_machine_top {
+    height: 53px;
+    width: 163px;
+  }
+  .index-module_slot__DpPgW {
+    height: 35px;
+  }
+  .index-module_num__j6XH3 {
+    font-size: 14px;
+    height: 35px;
+    line-height: 33px;
+  }
+  .index-module_slot__DpPgW:nth-child(1) {
+    margin-left: 0 !important;
+  }
+  .index-module_slot__DpPgW {
+    height: 30px !important;
+    margin-left: 5px !important;
+  }
+  .bg_gray_div {
+    height: 30px;
+  }
+  /***** end of slot machine *******/
+
+  /****** second result home ************/
+  .typing_text_2_main_div {
+    font-size: 100px;
+  }
+  .line {
+    margin-top: -17px;
+  }
+  .nextDraw {
+    font-size: 45px;
+    height: 100px;
+  }
+  .secoundPrizeNo {
+    font-size: 55px;
+    margin-top: 0;
+  }
+  .number {
+    font-size: 85px;
+  }
+  .nd {
+    font-size: 56px;
+  }
+  .bottom_text li span {
+    font-size: 26px;
+  }
+  .draw_date_time {
+    height: 37px;
+  }
+
+  .bottom_logo {
+    height: 40px;
+    width: 50px;
+  }
+
+  .bottom_div {
+    margin-top: 3px;
+  }
+}
