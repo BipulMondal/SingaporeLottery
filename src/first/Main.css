@@ -4,7 +4,8 @@
 }
 .home_main_div {
   background-image: url("../images/home.jpeg");
-  height: 100vh;
+  /* height: 100vh; */
+  height: 90vh;
   width: 100%;
   background-position: center;
   background-size: cover;

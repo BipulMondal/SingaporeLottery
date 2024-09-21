@@ -318,7 +318,8 @@
     -webkit-text-stroke: 0.8px white;
   }
   .home_text p:nth-child(3) {
-    font-size: 65px;
+    /* font-size: 65px; */
+    font-size: 56px;
   }
   .top_left {
     font-size: 7px;
