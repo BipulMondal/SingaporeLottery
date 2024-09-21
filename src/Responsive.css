@@ -12,6 +12,7 @@
     font-size: 60px;
     font-weight: 600;
     -webkit-text-stroke: 1px white;
+    line-height: 50px;
   }
   .home_text p:nth-child(3) {
     font-size: 90px;
@@ -313,13 +314,22 @@
 
 /*========== for mobile landscape mode responsive css ===============*/
 @media only screen and (max-width: 659px) and (orientation: landscape) {
+
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    /* Optional: you can also add specific styles for better user experience */
+    box-sizing: border-box;
+  }
   .home_text {
-    font-size: 35px;
+    font-size: 30px;
     -webkit-text-stroke: 0.8px white;
   }
   .home_text p:nth-child(3) {
     /* font-size: 65px; */
-    font-size: 56px;
+    font-size: 50px;
   }
   .top_left {
     font-size: 7px;
