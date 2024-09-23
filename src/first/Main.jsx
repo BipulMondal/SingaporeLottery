@@ -124,7 +124,7 @@ const Main = () => {
   const formattedCount = String(count).padStart(2, "0");
 
   return home ? (
-    <div className="home_main_div">
+    <div className="home_main_div content">
       <div className="home_text">
         <p>HONGKONG LOTTERIES</p>
         <p>PRESENTS</p>

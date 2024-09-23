@@ -161,8 +161,12 @@
     width: 2px;
   }
   .zoomed {
-    transform: scale(2.4);
-    margin-right: 0;
+    /* transform: scale(2.4);
+    margin-right: 0; */
+
+    transform: scale(3.3);
+    margin-right: 50px;
+    margin-left: -46px;
   }
   .slot_machine_top {
     /* width: 130px; */
@@ -200,13 +204,13 @@
   }
 
   .logo_container {
-    transform: skewY(60deg) rotate(-55deg);
+    transform: skewY(60deg) rotate(-58deg);
     padding-top: 28px;
   }
   .logo_container img {
     margin-left: 66px;
-    height: 8px;
-    width: 8px;
+    height: 7px;
+    width: 7px;
   }
   .slot_main_div {
   }
@@ -255,7 +259,7 @@
     width: 100%;
   }
   .slot_machines {
-    padding: 2px;
+    padding: 1px;
   }
 }
 @media (min-width: 641px) and (max-width: 767px) {
@@ -315,13 +319,15 @@
 /*========== for mobile landscape mode responsive css ===============*/
 @media only screen and (max-width: 659px) and (orientation: landscape) {
 
-  body {
+  /* body {
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-    /* Optional: you can also add specific styles for better user experience */
     box-sizing: border-box;
+  } */
+  .content {
+    padding: env(safe-area-inset);
   }
   .home_text {
     font-size: 30px;
@@ -330,7 +336,6 @@
   .home_text p:nth-child(3) {
     /* font-size: 65px; */
     font-size: 50px;
-    color: crimson;
   }
   .top_left {
     font-size: 7px;
@@ -343,7 +348,7 @@
     text-align: center;
   }
   .draw img {
-    width: 550px;
+    width: 515px;
     height: 40px;
   }
   .main_div_second {
@@ -359,7 +364,7 @@
     font-size: 6px;
   }
   .first {
-    top: 13px;
+    top: 19px;
   }
   .first img {
     height: 26px;
@@ -367,12 +372,13 @@
   }
   .pri h2 {
     top: 21%;
-    font-size: 22px;
+    font-size: 18px;
+    -webkit-text-stroke: initial;
   }
   .digit h3 {
     top: 42%;
     font-size: 12px;
-    -webkit-text-stroke: 0.1px white;
+    -webkit-text-stroke: initial;
   }
   .prize_number {
     margin-bottom: 2px;
@@ -404,8 +410,8 @@
   }
   .okk,
   .letter_okk {
-    width: 85px;
-    height: 85px;
+    width: 79px;
+    height: 79px;
   }
   .spin_top_line {
     width: 87%;
@@ -414,10 +420,10 @@
   .letter-circle {
     width: 85px;
     height: 85px;
-    margin: 12px 24px;
+    margin: 10px 24px;
   }
   .logo_container img {
-    margin-left: 57px;
+    margin-left: 52px;
   }
   .arrow,
   .letter_Arrow {
@@ -431,14 +437,24 @@
     font-size: 10px;
   }
   .slot_main_div {
-    padding: 3px;
+    padding: 0px;
     width: 82%;
+    height: 66%;
   }
   .slot_machine_top {
-    height: 40px;
+    /* height: 40px; */
+    height: 90%;
   }
   .bg_gray_div {
-    height: 20px;
+    height: 100%;
+  }
+  .dot {
+    height: 6px;
+    width: 5px;
+  }
+  .slotWidth {
+    width: 55%;
+    height: 13%;
   }
 
   .index-module_num__j6XH3 {
@@ -485,7 +501,7 @@
     font-size: 1.2rem;
   }
   .pxwell {
-    -webkit-text-stroke: 1.2px #fff;
+    -webkit-text-stroke: 0.5px #fff;
   }
   .live_draw_main {
     width: 33px;
@@ -500,7 +516,7 @@
     width: 87vw;
   }
   .digits_dot {
-    font-size: 5px;
+    font-size: 4px;
   }
   .index-module_slot_wrap__ZT-DX :nth-child(2),
   .index-module_slot_wrap__ZT-DX :nth-child(3),
@@ -511,11 +527,12 @@
   .second_inner {
     width: 53%;
   }
-  .slot_machines_third  {
-    padding: 2px;
+  .slot_machines_third {
+    padding: 1px;
   }
-  .slot_machines_fourth  {
-    padding: 2px;
+  .slot_machines_fourth {
+    width: 25%;
+    padding: 1px;
   }
   .slot_component {
     width: 57%;
@@ -523,10 +540,7 @@
   .okk, .letter_okk {
     margin: 2.5px auto;
   }
-  .circle, .letter-circle {
-    width: 90px;
-    height: 90px;
-}
+
 }
 
 @media only screen and (min-width: 568px) and (max-width: 585px) and (orientation: landscape) {
@@ -540,12 +554,15 @@
 
 @media only screen and (min-width: 660px) and (max-width: 932px) and (orientation: landscape) {
   .home_text {
-    font-size: 38px;
-    -webkit-text-stroke: 2px white;
+    font-size: 35px;
+    -webkit-text-stroke: 1px white;
   }
   .home_text p:nth-child(3) {
-    font-size: 100px;
+    font-size: 70px;
   }
+  .pxwell {
+    -webkit-text-stroke: 0.5px #fff;
+}
   .top_left {
     font-size: 10px;
     padding-top: 3px;
@@ -596,7 +613,7 @@
     font-size: 47px;
   }
   .first {
-    top: 21px;
+    top: 23px;
   }
   .first img {
     height: 30px;
@@ -609,10 +626,12 @@
   .pri h2 {
     top: 20%;
     font-size: 23px;
+    -webkit-text-stroke: initial;
   }
   .digit h3 {
     top: 39%;
     font-size: 16px;
+    -webkit-text-stroke: initial;
   }
   .prize {
     margin-left: 7px;

@@ -2,6 +2,15 @@
   margin: 0px;
   padding: 0;
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  text-align: center;
+}
 .home_main_div {
   background-image: url("../images/home.jpeg");
   height: 100vh;
@@ -206,6 +215,9 @@
 .fall_blink_text {
   /* height: 447px; */
   height: 280px;
+}
+.slot_component {
+  width: 74%;
 }
 
 /* Keyframes for fall */

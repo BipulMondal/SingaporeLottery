@@ -149,6 +149,7 @@ function Category({ gameTime }) {
             <button
               onClick={(e) => {
                 navigate(`/frontendView/${row.game_name}`, { state: { row } });
+                toggleFullScreen()
               }}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 ml-1 rounded"
             >
@@ -165,7 +166,6 @@ function Category({ gameTime }) {
     setfromdata({ ...fromdata, [name]: value });
   };
 
-  //ValidationFunction
 
   const handleValidation = () => {
     if (!fromdata.DrawNo) {
@@ -225,19 +225,33 @@ function Category({ gameTime }) {
     return true;
   };
 
-  // function getRandomDateIn2022() {
-  //   // Start and end dates for 2022
-  //   const startOf2022 = new Date("2022-01-01T00:00:00Z");
-  //   const endOf2022 = new Date("2022-12-31T23:59:59Z");
-
-  //   // Generate a random timestamp within the range
-  //   const randomTimestamp =
-  //     startOf2022.getTime() +
-  //     Math.random() * (endOf2022.getTime() - startOf2022.getTime());
-
-  //   // Create a new Date object with the random timestamp
-  //   return new Date(randomTimestamp);
-  // }
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().then(() => {
+        document.body.classList.add("fullscreen-active");
+      }).catch((err) => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen().then(() => {
+        document.body.classList.remove("fullscreen-active");
+      }).catch((err) => {
+        console.error(`Error attempting to exit full-screen mode: ${err.message}`);
+      });
+    }
+  }
+  
+  // Automatically enter fullscreen on landscape mode
+  window.addEventListener("orientationchange", function() {
+    if (window.orientation === 90 || window.orientation === -90) {
+      toggleFullScreen(); // Trigger fullscreen when entering landscape mode
+    } else if (window.orientation === 0 || window.orientation === 180) {
+      if (document.fullscreenElement) {
+        document.exitFullscreen(); // Exit fullscreen in portrait mode
+      }
+    }
+  });
+  
 
   function getCurrentDateFormatted() {
     // Get the current date
@@ -542,6 +556,8 @@ function Category({ gameTime }) {
           </div>
         )}
       </section>
+
+      
     </>
   );
 }

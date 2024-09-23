@@ -35,11 +35,9 @@ const SlotMechine = ({ duration, endNumbers, rotate, fourth, slotWidth }) => {
 
   return (
     <>
-      <div className="h-1 bg-white"></div>
+      {/* <div className="h-1 bg-white"></div> */}
       <div
-        className={`h-[90px] ${fourth ? "w-[249px]" : "w-[290px]"} ${
-          slotWidth ? "w-[50%]" : "w-[100%]"
-        } bg-white flex flex-col justify-center item-center slot_machine_top`}
+        className={`h-[90px] ${fourth ? "w-[249px]" : "w-[290px]"} bg-white flex flex-col justify-center item-center ${slotWidth ? "slotWidth" : "slot_machine_top"} `}
       >
         <div className="digits_dot">
           <hr className="dot" />
