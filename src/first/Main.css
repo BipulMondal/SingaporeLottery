@@ -475,7 +475,7 @@
 .slot_machines {
   width: 50%;
   display: flex;
-  padding: 4px;
+  padding: 6px;
 }
 .third_inner {
   margin: auto;
@@ -487,7 +487,7 @@
 .slot_machines_third {
   width: 27%;
   display: flex;
-  padding: 4px;
+  padding: 6px;
 }
 .fourth_inner {
   /* width: 53%; */
@@ -496,9 +496,9 @@
   flex-wrap: wrap;
 }
 .slot_machines_fourth {
-  /* width: 50%; */
+  width: 25%;
   display: flex;
-  padding: 4px 1px;
+  padding: 6px 22px;
 }
 
 /********************* table.css *****************/
