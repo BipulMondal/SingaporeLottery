@@ -151,7 +151,16 @@ function Category({ gameTime }) {
                 navigate(`/frontendView/${row.game_name}`, { state: { row } });
                 toggleFullScreen()
               }}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 ml-1 rounded"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 ml-1 rounded small_screen"
+            >
+              view
+            </button>
+            <button
+              onClick={(e) => {
+                navigate(`/frontendView/${row.game_name}`, { state: { row } });
+                // toggleFullScreen()
+              }}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 ml-1 rounded big_screen"
             >
               view
             </button>
@@ -282,7 +291,6 @@ function Category({ gameTime }) {
         currentDate: currentDate,
       };
 
-      console.log("iiiiiii00000", paramsobj);
       let res = await addCategory(paramsobj);
       if (res) {
         console.log(res, "lll");

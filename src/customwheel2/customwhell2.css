@@ -176,7 +176,7 @@
   transform: scale(3.8);
   transform-origin: top left;
   transition: transform 2s ease-out;
-  margin-right: 140px;
+  /* margin-right: 140px; */
 }
 
 .scroll-container {

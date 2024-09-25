@@ -42,8 +42,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.main_div_second {
+  /* padding-top: 30px; */
+}
 .pxwell {
   -webkit-text-stroke: 2px #fff;
+}
+.small_screen {
+  display: none;
 }
 
 /*-------   priyanka----------*/
