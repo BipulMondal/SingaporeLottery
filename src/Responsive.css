@@ -2,6 +2,7 @@
 /* =============== Responsive Css ============*/
 /* ###########################################*/
 
+
 @media (max-width: 640px) {
   .main_div {
     display: flex;
