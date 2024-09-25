@@ -226,20 +226,23 @@
     width: 100%;
   }
   .nextDraw {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: initial;
     font-size: 42px;
     font-weight: 900;
+    color: #4242cf;
   }
   .secoundPrizeNo {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: initial;
     font-size: 65px;
     margin-top: 50px;
   }
   .number {
     font-size: 150px;
+    -webkit-text-stroke: initial;
   }
   .nd {
     font-size: 70px;
+    -webkit-text-stroke: initial;
   }
   .bottom_text {
     width: 100%;
@@ -282,6 +285,7 @@
   .prize_number {
     margin-bottom: -2px;
     font-size: 39px;
+    -webkit-text-stroke: initial;
   }
   .digit h3 {
     font-size: 29px;
@@ -376,6 +380,7 @@
   .prize_number {
     margin-bottom: 2px;
     font-size: 13px;
+    -webkit-text-stroke: initial;
   }
   .main_middle {
     height: 72%;
@@ -480,15 +485,20 @@
   }
   .nextDraw {
     height: 150px;
+    -webkit-text-stroke: initial;
+    color: #4242cf;
   }
   .number {
     font-size: 50px;
+    -webkit-text-stroke: initial;
   }
   .nd {
     font-size: 45px;
+    -webkit-text-stroke: initial;
   }
   .secoundPrizeNo {
     font-size: 45px;
+    -webkit-text-stroke: initial;
   }
   .live_draw {
     font-size: 1.2rem;
@@ -645,13 +655,13 @@
 @media only screen and (min-width: 660px) and (max-width: 932px) and (orientation: landscape) {
   .home_text {
     font-size: 35px;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke:unset
   }
   .home_text p:nth-child(3) {
     font-size: 70px;
   }
   .pxwell {
-    -webkit-text-stroke: 0.5px #fff;
+    -webkit-text-stroke: unset;
   }
   .top_left {
     font-size: 10px;
@@ -718,6 +728,7 @@
   .prize_number {
     margin-bottom: 2px;
     font-size: 15px;
+    -webkit-text-stroke: initial;
   }
   .pri h2 {
     top: 20%;
@@ -852,16 +863,21 @@
   .nextDraw {
     font-size: 43px;
     height: 100px;
+    -webkit-text-stroke: initial;
+    color: #4242cf;
   }
   .secoundPrizeNo {
     font-size: 55px;
     margin-top: 0;
+    -webkit-text-stroke: initial;
   }
   .number {
     font-size: 85px;
+    -webkit-text-stroke: initial;
   }
   .nd {
     font-size: 56px;
+    -webkit-text-stroke: initial;
   }
   .bottom_text li span {
     font-size: 26px;
