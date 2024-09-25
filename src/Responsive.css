@@ -11,7 +11,7 @@
   .home_text {
     font-size: 60px;
     font-weight: 600;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: initial;
     line-height: 50px;
   }
   .home_text p:nth-child(3) {
@@ -328,7 +328,7 @@
   }
   .home_text {
     font-size: 30px;
-    -webkit-text-stroke: 0.8px white;
+    -webkit-text-stroke: initial;
   }
   .home_text p:nth-child(3) {
     /* font-size: 65px; */
@@ -655,7 +655,7 @@
 @media only screen and (min-width: 660px) and (max-width: 932px) and (orientation: landscape) {
   .home_text {
     font-size: 35px;
-    -webkit-text-stroke:unset
+    -webkit-text-stroke: initial;
   }
   .home_text p:nth-child(3) {
     font-size: 70px;
