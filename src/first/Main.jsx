@@ -10,6 +10,9 @@ import { useLocation } from "react-router-dom";
 const beepSound = new Audio(
   require("../assets/piep-33489-[AudioTrimmer.com].mp3")
 );
+// const beepSound = new Audio(
+//   require("../assets/New folder/starting.mpeg")
+// );
 const countDown = new Audio(require("../assets/coundDown.mpeg"));
 
 const Main = () => {
@@ -26,8 +29,6 @@ const Main = () => {
   const [resultData, setResultData] = useState({});
   const [allTime, setAllTime] = useState([]);
   const [singleDrawTime, setSingleDrawTime] = useState("");
-
-  console.log("locationData", data);
 
   const fetchSpinData = useCallback(async () => {
     try {
@@ -105,9 +106,9 @@ const Main = () => {
   
       const changeState = setTimeout(() => {
         setStatus(true);
-        beepSound.pause(); // Pause beep sound if still playing
-        countDown.pause(); // Ensure countdown audio is paused
-      }, 19000);
+        beepSound.pause(); 
+        countDown.pause(); 
+      }, 16000);
   
       return () => {
         clearInterval(interval);
@@ -119,8 +120,6 @@ const Main = () => {
     }
   }, [home]);
   
-  
-  // Format count to always display two digits
   const formattedCount = String(count).padStart(2, "0");
 
   return home ? (

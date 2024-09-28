@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import SlotMechine from "../slotMechine/SlotMechine";
 import FourthPrizeHome from "../FourthPrice/FourthPrizeHome";
-const audio = new Audio(
-  require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
-);
+// const audio = new Audio(
+//   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
+// );
+const audio = new Audio(require("../assets/New folder/slot.aac"))
 
 const ThirdPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
   const [status, setStatus] = useState(true);
@@ -19,7 +20,7 @@ const ThirdPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
     const stopAudio = setTimeout(() => {
       audio.pause();
       audio.currentTime = 0;
-    }, 9500);
+    }, 6000);
 
     const changeStatus = setTimeout(() => {
       setStatus(false);
@@ -41,7 +42,7 @@ const ThirdPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
               return (
                 <div className="slot_machines_third" key={index}>
                   <SlotMechine
-                    duration={10}
+                    duration={6}
                     endNumbers={endval}
                     setvalueStart
                     rotate

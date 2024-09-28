@@ -54,7 +54,7 @@ const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
 
     const changeStatus = setTimeout(() => {
       setStatus(false);
-    }, 15000);
+    }, 25000);
 
     return () => {
       clearTimeout(typeText);

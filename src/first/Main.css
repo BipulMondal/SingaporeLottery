@@ -35,7 +35,8 @@
   font-weight: 800;
 }
 .main_div {
-  background-image: url("../images/lottery_bg.jpg");
+  /* background-image: url("../images/lottery_bg.jpg"); */
+  background-color: red;
   height: 100vh;
   width: 100%;
   background-position: center;

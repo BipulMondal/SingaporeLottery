@@ -3,7 +3,9 @@ import "./customwhell2.css";
 import SlotMechine from "../slotMechine/SlotMechine";
 import SecoundPrizeHome from "../SecoundPrize/SecoundPrizeHome";
 import logo from "../images/logo/25.png";
-const audio = require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3");
+// const audio = require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3");
+const wheelAudio = require("../assets/New folder/spinner.aac");
+const slotAudio = require("../assets/New folder/slot1.mpeg")
 
 function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePosition }) {
   const [rotationAngleNumber, setRotationAngleNumber] = useState(0);
@@ -25,23 +27,23 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
 
     const zoomTimer = setTimeout(() => {
       setZoomed("zoomed");
-    }, 7000);
+    }, 10200);
 
     const scrollLettersTimer = setTimeout(() => {
       if (letterWheelRef.current) {
         letterWheelRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 16500);
+    }, 18500);
 
     const digitsTimer = setTimeout(() => {
       if (digitsRef.current) {
         digitsRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 18000);
+    }, 20500);
 
     const changeState = setTimeout(() => {
       setStatus(false);
-    }, 24000);
+    }, 26500);
 
     return () => {
       clearTimeout(zoomTimer);
@@ -60,13 +62,16 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
   const alphabetDeg = 360 / letters.length;
 
   const handleRotate = useCallback(() => {
-    var audio1 = new Audio(audio);
+    // var audio1 = new Audio(audio);
+    var audio1 = new Audio(wheelAudio);
+    var audio2 = new Audio(slotAudio);
 
     const num = parseInt(inputValueNumber);
     const letterIndex = letters.indexOf(inputValueLetter.toUpperCase());
 
     if (numbers.includes(num) && letterIndex !== -1) {
       audio1.play();
+      audio2.play();
       const anglePerItemNumber = 360 / numbers.length;
       const anglePerItemLetter = 360 / letters.length;
 
@@ -84,8 +89,8 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
       const numberWheelStyle = document.querySelector(".circle").style;
       const letterWheelStyle = document.querySelector(".letter-circle").style;
 
-      numberWheelStyle.transition = `transform 15s cubic-bezier(0.25, 1, 0.26, 1)`;
-      letterWheelStyle.transition = `transform 15s cubic-bezier(0.25, 1, 0.26, 1)`;
+      numberWheelStyle.transition = `transform 23s cubic-bezier(0.25, 1, 0.26, 1)`;
+      letterWheelStyle.transition = `transform 23s cubic-bezier(0.25, 1, 0.26, 1)`;
 
       setRotationAngleNumber(
         rotationAngleNumber + targetAngleNumber + randomFullRotations
@@ -95,15 +100,17 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
       );
 
       setTimeout(() => {
-        audio1.pause();
-      }, 12500);
+        audio2.pause();
+      }, 8500);
 
       setTimeout(() => {
+        audio1.pause();
+      }, 14000);
 
-
+      setTimeout(() => {
         numberWheelStyle.transition = `none`;
         letterWheelStyle.transition = `none`;
-      }, 15000); // 15 second
+      }, 19000); // 15 second
     } else {
       alert(
         "Please enter a valid number (30-45) and letter (A, B, C, D, E, G, H, J, K, L)"
@@ -201,7 +208,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           className="bg-black h-auto border-l-2 slot_component"
           ref={digitsRef}
         >
-          <SlotMechine duration={15} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} />
+          <SlotMechine duration={9} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} />
         </div>
       </div>
 

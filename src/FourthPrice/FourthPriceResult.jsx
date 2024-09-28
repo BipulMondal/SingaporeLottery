@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import SlotMechine from "../slotMechine/SlotMechine";
-const audio = new Audio(
-  require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
-);
+// const audio = new Audio(
+//   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
+// );
+const audio = new Audio(require("../assets/New folder/slot.aac"))
 
 const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
   // const [currentBatch, setCurrentBatch] = useState(0); // To track which batch is being displayed
@@ -59,7 +60,7 @@ const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
               return (
                 <div className="slot_machines_fourth" key={index}>
                   <SlotMechine
-                    duration={10} // Duration for the slot machine rotation
+                    duration={6} // Duration for the slot machine rotation
                     endNumbers={endval}
                     setvalueStart
                     rotate={isRotating}
