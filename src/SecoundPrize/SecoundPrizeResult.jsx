@@ -5,7 +5,7 @@ import ThirdPrizeHome from "../ThirdPrize/ThirdPrizeHome";
 //   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
 // );
 
-const audio = new Audio(require("../assets/New folder/slot.aac"))
+const audio = new Audio(require("../assets/New folder/slot1.mpeg"))
 
 const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
   const [status, setStatus] = useState(true);
@@ -24,7 +24,7 @@ const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
 
     const changeStatus = setTimeout(() => {
       setStatus(false);
-    }, 16000);
+    }, 18000);
 
     return () => {
       clearTimeout(stopAudio);

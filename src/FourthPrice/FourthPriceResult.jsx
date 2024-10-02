@@ -3,7 +3,7 @@ import SlotMechine from "../slotMechine/SlotMechine";
 // const audio = new Audio(
 //   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
 // );
-const audio = new Audio(require("../assets/New folder/slot.aac"))
+const audio = new Audio(require("../assets/New folder/slot1.mpeg"))
 
 const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
   // const [currentBatch, setCurrentBatch] = useState(0); // To track which batch is being displayed
@@ -35,7 +35,7 @@ const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
           showResults(batchIndex + 1);
         }, 6000);
       }
-    }, 10000); // 10 seconds duration
+    }, 6000); // 10 seconds duration
 
     // Cleanup the timer when the component unmounts
     return () => {

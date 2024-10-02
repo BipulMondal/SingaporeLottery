@@ -33,17 +33,17 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
       if (letterWheelRef.current) {
         letterWheelRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 18500);
+    }, 20000);
 
     const digitsTimer = setTimeout(() => {
       if (digitsRef.current) {
         digitsRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 20500);
+    }, 23000);
 
     const changeState = setTimeout(() => {
       setStatus(false);
-    }, 26500);
+    }, 28500);
 
     return () => {
       clearTimeout(zoomTimer);
@@ -89,8 +89,8 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
       const numberWheelStyle = document.querySelector(".circle").style;
       const letterWheelStyle = document.querySelector(".letter-circle").style;
 
-      numberWheelStyle.transition = `transform 23s cubic-bezier(0.25, 1, 0.26, 1)`;
-      letterWheelStyle.transition = `transform 23s cubic-bezier(0.25, 1, 0.26, 1)`;
+      numberWheelStyle.transition = `transform 22s cubic-bezier(0.25, 1, 0.30, 1)`;
+      letterWheelStyle.transition = `transform 22s cubic-bezier(0.25, 1, 0.30, 1)`;
 
       setRotationAngleNumber(
         rotationAngleNumber + targetAngleNumber + randomFullRotations

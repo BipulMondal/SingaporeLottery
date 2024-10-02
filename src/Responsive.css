@@ -166,8 +166,8 @@
     margin-right: 0; */
 
     transform: scale(3.3);
-    margin-right: 50px;
-    margin-left: -46px;
+    margin-right: -17px;
+    /* margin-left: -46px; */
   }
   .slot_machine_top {
     /* width: 130px; */
@@ -331,6 +331,12 @@
     font-size: 30px;
     -webkit-text-stroke: initial;
   }
+  .slot_machines {
+    padding: 1.5px;
+}
+  .main_spin {
+    width: 30%;
+  }
   .home_text p:nth-child(3) {
     /* font-size: 65px; */
     font-size: 50px;
@@ -409,27 +415,27 @@
   }
   .okk,
   .letter_okk {
-    width: 79px;
-    height: 79px;
+    width: 76px;
+    height: 76px;
   }
   .spin_top_line {
     width: 87%;
   }
   .circle,
   .letter-circle {
-    width: 85px;
-    height: 85px;
-    margin: 10px 24px;
+    width: 82px;
+    height: 82px;
+    margin: 10px 17px;
   }
   .logo_container img {
-    margin-left: 52px;
+    margin-left: 23px;
   }
   .arrow,
   .letter_Arrow {
-    left: 37%;
+    left: 36%;
   }
   .circle_hr {
-    left: 35.5%;
+    left: 34.5%;
   }
   .text,
   .letter-text {
@@ -438,11 +444,14 @@
   .slot_main_div {
     padding: 0px;
     width: 82%;
-    height: 66%;
+    height: 50%;
+  }
+  .logo_container  {
+    padding: 26px;
   }
 
   .slot_machine_top {
-    height: 90%;
+    height: 97%;
   }
   .bg_gray_div {
     height: 100%;
@@ -455,8 +464,8 @@
     width: 5px;
   }
   .slotWidth {
-    width: 55%;
-    height: 13%;
+    width: 30%;
+    height: 18%;
   }
 
   .index-module_num__j6XH3 {
@@ -477,6 +486,9 @@
   .text,
   .letter-text {
     font-size: 8px;
+    left: -74%;
+    transform: skewY(60deg) rotate(10deg);
+    height: 45%;
   }
   .slot_machine_top {
     width: 100%;
@@ -500,6 +512,7 @@
   .secoundPrizeNo {
     font-size: 45px;
     -webkit-text-stroke: initial;
+    margin-top: 0;
   }
   .live_draw {
     font-size: 1.2rem;
@@ -524,25 +537,29 @@
   }
   .digits_dot {
     font-size: 4px;
+    height: 7px;
+  }
+  .digits_dot span {
+    font-size: 5px;
   }
   .index-module_slot_wrap__ZT-DX :nth-child(2),
   .index-module_slot_wrap__ZT-DX :nth-child(3),
   .index-module_slot_wrap__ZT-DX :nth-child(4),
   .index-module_slot_wrap__ZT-DX :nth-child(5) {
-    margin-left: 2px;
+    margin-left: 4px;
   }
   .second_inner {
     width: 53%;
   }
   .slot_machines_third {
-    padding: 1px;
+    padding: 1.5px;
   }
   .slot_machines_fourth {
     width: 25%;
-    padding: 1px;
+    padding: 1.5px;
   }
   .slot_component {
-    width: 57%;
+    width: 74%;
   }
   .okk,
   .letter_okk {
