@@ -12,7 +12,7 @@
   text-align: center;
 }
 .home_main_div {
-  background-image: url("../images/home.jpeg");
+  background-image: url("../images/home1.jpeg");
   height: 100vh;
   width: 100%;
   background-position: center;
@@ -35,8 +35,8 @@
   font-weight: 800;
 }
 .main_div {
-  /* background-image: url("../images/lottery_bg.jpg"); */
-  background-color: red;
+  background-image: url("../images/lottery_bg.jpg");
+  /* background-color: red; */
   height: 100vh;
   width: 100%;
   background-position: center;

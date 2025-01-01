@@ -55,7 +55,7 @@ const ThirdPrizeHome = ({setLiveDraw, setPrizePosition}) => {
 
     const changeStatus = setTimeout(() => {
       setStatus(false);
-    }, 25000);
+    }, 36000);
 
     return () => {
       clearTimeout(typeText);

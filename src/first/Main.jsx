@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import "./Main.css";
 import middle from "../images/draw_img.png";
 // import first from "../images/first.png";
-import logo from "../images/hongkonglogo.png";
+import logo from "../images/lottery_logo.png";
 import prize from "../images/prize.png";
 import CustomWheel2 from "../customwheel2/CustomWheel2";
 import { getAllTime, getFirstResult, getSingleTime } from "../Utils/AllApiCals";
@@ -78,7 +78,10 @@ const Main = () => {
       const interval = setInterval(() => {
         setCount((prevCount) => {
           if (prevCount > 0) {
-            countDown.play();
+            // countDown.play();
+            if (prevCount <= 10) {
+              countDown.play(); // Start countdown sound when count is 10 or less
+            }
             return prevCount - 1;
           } else if (prevCount === 0) {
             beepSound.play(); // Play the beep sound when count reaches 0
@@ -109,6 +112,7 @@ const Main = () => {
         beepSound.pause(); 
         countDown.pause(); 
       }, 16000);
+      // }, 76000);
   
       return () => {
         clearInterval(interval);
@@ -125,7 +129,7 @@ const Main = () => {
   return home ? (
     <div className="home_main_div content">
       <div className="home_text">
-        <p>HONGKONG LOTTERIES</p>
+        <p>SINGAPORE LOTTERIES</p>
         <p>PRESENTS</p>
         <p>PXWELL</p>
         <p>LIVE LOTTERY DRAW</p>
@@ -146,13 +150,13 @@ const Main = () => {
           <p className="w-full text-center bg-yellow-400 text-black rounded rounded-full font-bold top_left">
             PLAY LIVE DRAW ON <span className="text-red-700">YOUTUBE</span>{" "}
             <br />
-            HONG KONG LOTTERIES{" "}
+            SINGAPORE LOTTERIES{" "}
           </p>
         </div>
         <div className="">
           <div class="draw">
             <img src={middle} alt="middle" />
-            <h2 className="draw_text1">Hongkong lotteries</h2>
+            <h2 className="draw_text1">SINGAPORE LOTTERIES</h2>
             <h3 className="draw_text2">
               DRAW TIME{" "}
               {allTime.map((ele, id) => {
@@ -163,7 +167,7 @@ const Main = () => {
         </div>
         <div className="pt-1 pb-1 flex justify-center align-center bg-black rounded rounded-full w-56 h-[56px] top_right_uTube">
           <p className="w-full flex justify-center items-center bg-yellow-400 text-black rounded rounded-full font-bold top_right">
-            LIVE FROM HONG KONG
+            LIVE FROM SINGAPORE
           </p>
         </div>
       </div>
@@ -198,7 +202,7 @@ const Main = () => {
             <div className="typing_text_main_div">
               <ul className="dynamik_text">
                 <li>
-                  <span>HONGKONG LOTTERIES</span>
+                  <span>SINGAPORE LOTTERIES</span>
                 </li>
               </ul>
             </div>

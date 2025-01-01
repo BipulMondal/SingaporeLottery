@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./customwhell2.css";
 import SlotMechine from "../slotMechine/SlotMechine";
 import SecoundPrizeHome from "../SecoundPrize/SecoundPrizeHome";
-import logo from "../images/logo/25.png";
+import logo from "../images/logo/30-30.png";
 // const audio = require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3");
 const wheelAudio = require("../assets/New folder/spinner.aac");
 const slotAudio = require("../assets/New folder/slot1.mpeg")
@@ -141,7 +141,6 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
               <div className="okk">
                 {numbers.map((numb, i) => {
                   const rotateDegree = degree * i + 8;
-                  console.log("56565", rotateDegree, degree);
                   return (
                     <li
                       key={i}
