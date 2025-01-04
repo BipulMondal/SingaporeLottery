@@ -84,9 +84,9 @@ const Main = () => {
             }
             return prevCount - 1;
           } else if (prevCount === 0) {
-            beepSound.play(); // Play the beep sound when count reaches 0
-            countDown.pause(); // Pause countdown audio
-            clearInterval(interval); // Clear the interval
+            beepSound.play(); 
+            countDown.pause(); 
+            clearInterval(interval);
             return 0;
           } else {
             clearInterval(interval);
