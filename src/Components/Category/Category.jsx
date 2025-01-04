@@ -74,9 +74,9 @@ function Category({ gameTime }) {
       style: {
         flexGrow: 0,
         flexShrink: 1,
-        flexBasis: '80px',
-        maxWidth: '80px',
-        minWidth: '80px',
+        flexBasis: "80px",
+        maxWidth: "80px",
+        minWidth: "80px",
       },
       wrap: true,
     },
@@ -87,9 +87,9 @@ function Category({ gameTime }) {
       style: {
         flexGrow: 0,
         flexShrink: 1,
-        flexBasis: '80px',
-        maxWidth: '80px',
-        minWidth: '80px',
+        flexBasis: "80px",
+        maxWidth: "80px",
+        minWidth: "80px",
       },
       wrap: true,
     },
@@ -99,9 +99,9 @@ function Category({ gameTime }) {
       style: {
         flexGrow: 0,
         flexShrink: 1,
-        flexBasis: '80px',
-        maxWidth: '80px',
-        minWidth: '80px',
+        flexBasis: "80px",
+        maxWidth: "80px",
+        minWidth: "80px",
       },
       wrap: true,
     },
@@ -149,7 +149,7 @@ function Category({ gameTime }) {
             <button
               onClick={(e) => {
                 navigate(`/frontendView/${row.game_name}`, { state: { row } });
-                toggleFullScreen()
+                toggleFullScreen();
               }}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 ml-1 rounded small_screen"
             >
@@ -174,7 +174,6 @@ function Category({ gameTime }) {
     const { name, value } = e.target;
     setfromdata({ ...fromdata, [name]: value });
   };
-
 
   const handleValidation = () => {
     if (!fromdata.DrawNo) {
@@ -236,22 +235,32 @@ function Category({ gameTime }) {
 
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().then(() => {
-        document.body.classList.add("fullscreen-active");
-      }).catch((err) => {
-        console.error(`Error attempting to enable full-screen mode: ${err.message}`);
-      });
+      document.documentElement
+        .requestFullscreen()
+        .then(() => {
+          document.body.classList.add("fullscreen-active");
+        })
+        .catch((err) => {
+          console.error(
+            `Error attempting to enable full-screen mode: ${err.message}`
+          );
+        });
     } else {
-      document.exitFullscreen().then(() => {
-        document.body.classList.remove("fullscreen-active");
-      }).catch((err) => {
-        console.error(`Error attempting to exit full-screen mode: ${err.message}`);
-      });
+      document
+        .exitFullscreen()
+        .then(() => {
+          document.body.classList.remove("fullscreen-active");
+        })
+        .catch((err) => {
+          console.error(
+            `Error attempting to exit full-screen mode: ${err.message}`
+          );
+        });
     }
   }
-  
+
   // Automatically enter fullscreen on landscape mode
-  window.addEventListener("orientationchange", function() {
+  window.addEventListener("orientationchange", function () {
     if (window.orientation === 90 || window.orientation === -90) {
       toggleFullScreen(); // Trigger fullscreen when entering landscape mode
     } else if (window.orientation === 0 || window.orientation === 180) {
@@ -260,7 +269,6 @@ function Category({ gameTime }) {
       }
     }
   });
-  
 
   function getCurrentDateFormatted() {
     // Get the current date
@@ -431,7 +439,7 @@ function Category({ gameTime }) {
         {/*Model from*/}
         {isModal && (
           <div className="modal_main">
-            <div className="modelcss">
+            <div className="modelcss h-[21rem] lg:h-[36rem] w-[30rem] lg:w-[50rem] p-[0.8rem] lg:p-[1.3rem] overflow-y-scroll lg:overflow-y-hidden overflow-x-hidden lg:">
               <span>Set Golden Result {gameTime} </span>
               <span
                 onClick={() => {
@@ -441,8 +449,8 @@ function Category({ gameTime }) {
               >
                 Close
               </span>
-              <form class="max-w-[54rem]  mx-auto m-t-[4rem] ">
-                <div class="mb-5">
+              <form class="w-[30rem] lg:w-[50rem]  mx-auto m-t-[4rem] ">
+                <div class="mb-2 w-[95%]">
                   <label
                     for="email"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -460,7 +468,7 @@ function Category({ gameTime }) {
                     required
                   />
                 </div>
-                <div class="mb-5">
+                <div class="mb-2 w-[95%]">
                   <label
                     for="email"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -477,7 +485,7 @@ function Category({ gameTime }) {
                     required
                   />
                 </div>
-                <div class="mb-5">
+                <div class="mb-2 w-[95%]">
                   <label
                     for="password"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -496,7 +504,7 @@ function Category({ gameTime }) {
                     required
                   />
                 </div>
-                <div class="mb-5">
+                <div class="mb-2 w-[95%]">
                   <label
                     for="repeat-password"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -513,7 +521,7 @@ function Category({ gameTime }) {
                     required
                   />
                 </div>
-                <div class="mb-5">
+                <div class="mb-2 w-[95%]">
                   <label
                     for="repeat-password"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -530,7 +538,7 @@ function Category({ gameTime }) {
                     required
                   />
                 </div>
-                <div class="mb-5">
+                <div class="mb-2 w-[95%]">
                   <label
                     for="repeat-password"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -548,24 +556,24 @@ function Category({ gameTime }) {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  onClick={(e) => {
-                    e.preventDefault();
+                <div className="flex justify-center items-center w-[95%]">
+                  <button
+                    type="submit"
+                    onClick={(e) => {
+                      e.preventDefault();
 
-                    handleSubmit();
-                  }}
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 relative float-right"
-                >
-                  Add
-                </button>
+                      handleSubmit();
+                    }}
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 relative "
+                  >
+                    Add
+                  </button>
+                </div>
               </form>
             </div>
           </div>
         )}
       </section>
-
-      
     </>
   );
 }
