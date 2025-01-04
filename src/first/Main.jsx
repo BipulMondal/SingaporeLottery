@@ -145,7 +145,7 @@ const Main = () => {
   ) : (
     <div className="main_div">
       {/* top */}
-      <div className="flex justify-around main_div_second">
+      <div className="flex justify-around main_div_second pt-[0.5rem]">
         <div className="pt-1 pb-1 flex justify-center align-center bg-black rounded rounded-full w-72 h-[56px] top_left_uTube">
           <p className="w-full text-center bg-yellow-400 text-black rounded rounded-full font-bold top_left">
             PLAY LIVE DRAW ON <span className="text-red-700">YOUTUBE</span>{" "}
@@ -172,7 +172,7 @@ const Main = () => {
         </div>
       </div>
       {/* middle */}
-      <div className="mt-4 w-[98%] h-[78vh] mx-auto flex justify-between main_middle">
+      <div className="mt-[0.5rem] w-[98%] h-[78vh] mx-auto flex justify-between main_middle">
         <div className="w-[50px] h-[100%] flex justify-between items-center mr-2 main_middle_second ">
           <div className="w-full h-[90%] flex flex-col justify-evenly items-center text-black text-5xl rounded rounded-full font-bold pxwell_main">
             <p className="pxwell font-extrabold">P</p>
@@ -274,7 +274,7 @@ const Main = () => {
         <div className="oval_div">
           <div className="prize">
             <div className="first">
-              <img src={prize} alt="prize" />
+              <img className="prize_img" src={prize} alt="prize" />
               <h4 className="prize_number">{prizePosition}</h4>
             </div>
             <div className="pri">
@@ -302,7 +302,7 @@ const Main = () => {
         </div>
       </div>
       {/* bottom */}
-      <div className="flex justify-around mt-[12px] bottom_div">
+      <div className="flex justify-around mt-[0.5rem] bottom_div">
         <div className="pt-1 pb-1 flex justify-center align-center bg-black rounded rounded-full w-64 h-12 draw_date_time">
           <p className="w-full flex justify-center items-center bg-red-700 text-white rounded rounded-full font-bold">
             DRAW DATE - {data.game_date}

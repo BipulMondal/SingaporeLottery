@@ -1,17 +1,17 @@
 /* .slotvalues {
-  font-size: 50px;
-  padding-left: 5px;
-  padding-right: 5px;
+  font-size: 3.125rem;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
 } */
 .index-module_slot__DpPgW {
-  font-size: 50px !important;
-  /* padding-left: 5px !important;
-  padding-right: 5px !important; */
-  border-left: 3px solid rgb(77, 68, 68);
-  border-right: 3px solid rgb(77, 68, 68);
+  font-size: 3.125rem !important;
+  /* padding-left: 0.3125rem !important;
+  padding-right: 0.3125rem !important; */
+  border-left: 0.1875rem solid rgb(77, 68, 68);
+  border-right: 0.1875rem solid rgb(77, 68, 68);
   font-weight: 500;
   background-color: #fff;
-  height: 32px;
+  height: 2rem;
 }
 
 .example-button {
@@ -25,34 +25,34 @@
 .index-module_slot_wrap__ZT-DX :nth-child(3),
 .index-module_slot_wrap__ZT-DX :nth-child(4),
 .index-module_slot_wrap__ZT-DX :nth-child(5) {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 .outer_div {
   background: rgb(190, 188, 188);
-  box-shadow: -15px -15px -15px rgba(219, 63, 63, 0.2),
-    15px 15px 15px rgba(226, 61, 61, 0.1),
-    inset -5px -5px -5px rgba(201, 55, 55, 0.2),
-    inset 5px 5px 5px rgba(201, 54, 54, 0.1);
+  box-shadow: -0.9375rem -0.9375rem -0.9375rem rgba(219, 63, 63, 0.2),
+    0.9375rem 0.9375rem 0.9375rem rgba(226, 61, 61, 0.1),
+    inset -0.3125rem -0.3125rem -0.3125rem rgba(201, 55, 55, 0.2),
+    inset 0.3125rem 0.3125rem 0.3125rem rgba(201, 54, 54, 0.1);
 }
 
 /*---------------------------*/
 .index-module_slot__DpPgW {
-  height: 42px !important;
-  /* height: 30px !important; */
+  height: 2.625rem !important;
+  /* height: 1.875rem !important; */
   /* width: auto;   */
 }
 
 .index-module_num__j6XH3 {
-  /* height: 30px; */
-  height: 42px;
-  /* line-height: 30px;
-  font-size: 35px; */
-  line-height: 40px;
-  font-size: 40px;
+  /* height: 1.875rem; */
+  height: 2.625rem;
+  /* line-height: 1.875rem;
+  font-size: 2.1875rem; */
+  line-height: 2.5rem;
+  font-size: 2.5rem;
 }
 .dot {
-  height: 8px;
-  width: 8px;
+  height: 0.5rem;
+  width: 0.5rem;
   border-radius: 50%;
   background-color: black;
 }
@@ -60,8 +60,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 10px;
-  font-size: 8px;
+  height: 0.625rem;
+  font-size: 0.5rem;
 }
 .slotWidth {
   width: 35%;

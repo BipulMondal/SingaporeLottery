@@ -207,7 +207,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           className="bg-black h-auto border-l-2 slot_component"
           ref={digitsRef}
         >
-          <SlotMechine duration={9} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} />
+          <SlotMechine duration={11} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} />
         </div>
       </div>
 

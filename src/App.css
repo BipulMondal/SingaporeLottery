@@ -1,20 +1,20 @@
 .rdt_TableCell{
   /* background-color: red; */
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .rdt_TableCol_Sortable{
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .modelcss{
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 
-  border-radius: 30px;
+  border-radius: 1.875rem;
   position: fixed;
-  width: 800px;
-  height: 604px;
+  width: 50rem;
+  height: 37.75rem;
   z-index: 99;
-  inset: 0px;
+  inset: 0;
   background-color: rgb(202, 198, 198);
   margin: auto;
-  padding: 30px;
+  padding: 1.875rem;
 }

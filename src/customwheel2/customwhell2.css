@@ -1,9 +1,9 @@
 .circle {
-  width: 215px;
-  height: 215px;
+  width: 13.4375rem;
+  height: 13.4375rem;
   /* border: 1px solid black; */
   position: relative;
-  padding: 6px;
+  padding: 0.375rem;
   margin: 1em auto;
   border-radius: 50%;
   list-style: none;
@@ -12,9 +12,9 @@
   /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 .okk {
-  width: 204px;
-  height: 204px;
-  border: 1px solid red;
+  width: 12.75rem;
+  height: 12.75rem;
+  border: 0.0625rem solid red;
   position: relative;
   padding: 0;
   margin: 0em auto;
@@ -24,9 +24,9 @@
   rotate: 3deg;
 }
 .letter_okk {
-  width: 204px;
-  height: 204px;
-  border: 1px solid red;
+  width: 12.75rem;
+  height: 12.75rem;
+  border: 0.0625rem solid red;
   position: relative;
   padding: 0;
   margin: 0em auto;
@@ -44,7 +44,7 @@
   width: 50%;
   height: 50%;
   transform-origin: 0% 100%;
-  border-left: 1px solid red;
+  border-left: 0.0625rem solid red;
 }
 
 .text {
@@ -55,10 +55,10 @@
   text-align: center;
   display: block;
   transform: skewY(60deg) rotate(6deg);
-  padding-top: 20px;
+  padding-top: 1.25rem;
   cursor: pointer;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 1.3125rem;
 }
 .logo_container {
   position: absolute;
@@ -66,37 +66,37 @@
   width: 200%;
   height: 200%;
   transform: skewY(60deg) rotate(19deg);
-  padding-top: 29px;
+  padding-top: 1.8125rem;
 }
 .logo_container img {
-  margin-left: 81px;
+  margin-left: 5.0625rem;
 }
 
 .arrow {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 31px solid red;
+  border-left: 0.625rem solid transparent;
+  border-right: 0.625rem solid transparent;
+  border-top: 1.9375rem solid red;
   position: absolute;
   left: 48%;
-  top: 2px;
+  top: 0.125rem;
   z-index: 1;
 }
 .letter_Arrow {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 31px solid red;
+  border-left: 0.625rem solid transparent;
+  border-right: 0.625rem solid transparent;
+  border-top: 1.9375rem solid red;
   position: absolute;
   left: 48%;
-  top: 2px;
+  top: 0.125rem;
   z-index: 1;
 }
 .circle_hr {
-  height: 7px;
-  width: 26px;
+  height: 0.4375rem;
+  width: 1.625rem;
   left: 47%;
   position: absolute;
 }
@@ -104,15 +104,15 @@
 .spin-button {
   position: absolute;
   left: 40%;
-  width: 120px;
-  height: 40px;
+  width: 7.5rem;
+  height: 2.5rem;
   background-color: blue;
-  border-radius: 30px;
-  margin-top: 20px;
+  border-radius: 1.875rem;
+  margin-top: 1.25rem;
   cursor: pointer;
   outline: none;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .circle {
@@ -121,10 +121,10 @@
 
 /* Letter Circle Rotation */
 .letter-circle {
-  width: 215px;
-  height: 215px;
+  width: 13.4375rem;
+  height: 13.4375rem;
   position: relative;
-  padding: 6px;
+  padding: 0.375rem;
   margin: 1em auto;
   border-radius: 50%;
   list-style: none;
@@ -149,10 +149,10 @@
   text-align: center;
   display: block;
   transform: skewY(60deg) rotate(14deg);
-  padding-top: 20px;
+  padding-top: 1.25rem;
   cursor: pointer;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 2.8125rem;
 }
 
 /* Use this transition for smooth rotation */
