@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SlotMechine from "../slotMechine/SlotMechine";
 import ThirdPrizeHome from "../ThirdPrize/ThirdPrizeHome";
+import Modal from "../Components/Modal/Modal";
 // const audio = new Audio(
 //   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
 // );
@@ -35,7 +36,7 @@ const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
   }, []);
 
   return status ? (
-    <div className="second_result">
+    <div className="second_result relative">
       <div className="bg-black h-[79vh] border-l-2 ">
         <div className="second_inner">
           {resultData &&
@@ -53,6 +54,7 @@ const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
             })}
         </div>
       </div>
+      <Modal />
     </div>
   ) : (
     <ThirdPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} />
