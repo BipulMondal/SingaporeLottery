@@ -7,12 +7,12 @@ import prize from "../images/prize.png";
 import CustomWheel2 from "../customwheel2/CustomWheel2";
 import { getAllTime, getFirstResult, getSingleTime } from "../Utils/AllApiCals";
 import { useLocation } from "react-router-dom";
-const beepSound = new Audio(
-  require("../assets/piep-33489-[AudioTrimmer.com].mp3")
-);
 // const beepSound = new Audio(
-//   require("../assets/New folder/starting.mpeg")
+//   require("../assets/piep-33489-[AudioTrimmer.com].mp3")
 // );
+const beepSound = new Audio(
+  require("../assets/newSound/beep3.mp3")
+);
 const countDown = new Audio(require("../assets/coundDown.mpeg"));
 
 const Main = () => {

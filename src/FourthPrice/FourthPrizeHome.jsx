@@ -13,6 +13,9 @@ const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
   const [resultData, setResultData] = useState([]);
   const location = useLocation();
   const data = location.state.row || {};
+  const beepSound = new Audio(
+    require("../assets/newSound/pxwellbeep.mp3")
+  );
 
   const fetchThirdResult = useCallback(async () => {
     try {
@@ -54,9 +57,14 @@ const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
       setBottomText(true);
     }, 6500);
 
+    const playSound = setTimeout(() => {
+      beepSound.play()
+    },35000)
+
     const changeStatus = setTimeout(() => {
-      setStatus(false)
-    }, 25000);
+      setStatus(false);
+      beepSound.pause()
+    }, 36000);
 
     return () => {
       clearTimeout(typeText);
@@ -64,6 +72,7 @@ const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
       clearInterval(lineShow);
       clearTimeout(Blink);
       clearTimeout(bottomtextType);
+      clearTimeout(playSound);
       clearTimeout(changeStatus);
     };
   }, []);

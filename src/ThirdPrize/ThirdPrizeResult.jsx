@@ -4,7 +4,7 @@ import FourthPrizeHome from "../FourthPrice/FourthPrizeHome";
 // const audio = new Audio(
 //   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
 // );
-const audio = new Audio(require("../assets/New folder/slot1.mpeg"))
+const audio = new Audio(require("../assets/newSound/slotsound.mp3"))
 
 const ThirdPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
   const [status, setStatus] = useState(true);

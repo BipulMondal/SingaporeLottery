@@ -3,9 +3,11 @@ import "./customwhell2.css";
 import SlotMechine from "../slotMechine/SlotMechine";
 import SecoundPrizeHome from "../SecoundPrize/SecoundPrizeHome";
 import logo from "../images/logo/30-30.png";
-// const audio = require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3");
-const wheelAudio = require("../assets/New folder/spinner.aac");
-const slotAudio = require("../assets/New folder/slot1.mpeg")
+import Modal from "../Components/Modal/Modal";
+// const wheelAudio = require("../assets/New folder/spinner.aac");
+// const slotAudio = require("../assets/New folder/slot1.mpeg")
+const wheelAudio = require("../assets/newSound/wheelspin.mp3");
+const slotAudio = require("../assets/newSound/slotsound.mp3")
 
 function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePosition }) {
   const [rotationAngleNumber, setRotationAngleNumber] = useState(0);
@@ -26,23 +28,23 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
     setSlotWidth(true)
 
     const zoomTimer = setTimeout(() => {
-      setZoomed("zoomed");
+      // setZoomed("zoomed");
     }, 10200);
 
     const scrollLettersTimer = setTimeout(() => {
-      if (letterWheelRef.current) {
-        letterWheelRef.current.scrollIntoView({ behavior: "smooth" });
-      }
+      // if (letterWheelRef.current) {
+      //   letterWheelRef.current.scrollIntoView({ behavior: "smooth" });
+      // }
     }, 20000);
 
     const digitsTimer = setTimeout(() => {
-      if (digitsRef.current) {
-        digitsRef.current.scrollIntoView({ behavior: "smooth" });
-      }
+      // if (digitsRef.current) {
+      //   digitsRef.current.scrollIntoView({ behavior: "smooth" });
+      // }
     }, 23000);
 
     const changeState = setTimeout(() => {
-      setStatus(false);
+      // setStatus(false);
     }, 28500);
 
     return () => {
@@ -125,6 +127,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
   }, [rotate, inputValueNumber, inputValueLetter], letters, numbers, rotationAngleLetter, rotationAngleNumber, handleRotate);
 
   return status ? (
+    <>
     <div className={`${zoomed ? "zoomed" : ""} h-full relative wheel_main`}>
       <div className="flex h-full overflow-hidden wheel_second_main">
         <div className="w-[27%] h-full bg-gray-300 flex flex-col justify-between main_spin pb-[25px]">
@@ -230,7 +233,9 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           Spin
         </button>
       </div>
+    <Modal />
     </div>
+    </>
   ) : (
     <SecoundPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} />
   );

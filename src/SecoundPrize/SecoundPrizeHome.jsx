@@ -14,6 +14,11 @@ const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
   const location = useLocation();
   const data = location.state.row || {};
 
+  const beepSound = new Audio(
+    require("../assets/newSound/pxwellbeep.mp3")
+  );
+
+
   const fetchSecoundResult = useCallback(async () => {
     try {
       let res = await getSecoundThirdResult(data.game_date, data.game_name);
@@ -21,7 +26,6 @@ const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
         let filterData = res?.data?.map((item) => item["2ndresult"]);
         setResultData(filterData);
       }
-      console.log("ressssss", res);
     } catch (error) {
       console.log("errorrrrr", error);
     }
@@ -52,8 +56,13 @@ const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
       setBottomText(true);
     }, 6500);
 
+    const playSound = setTimeout(() => {
+      beepSound.play()
+    },35000)
+
     const changeStatus = setTimeout(() => {
       setStatus(false);
+      beepSound.pause()
     }, 36000);
 
     return () => {
@@ -62,6 +71,7 @@ const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
       clearInterval(lineShow);
       clearTimeout(Blink);
       clearTimeout(bottomtextType);
+      clearTimeout(playSound)
       clearTimeout(changeStatus);
     };
   }, []);
