@@ -1,6 +1,6 @@
-const BASE_URL = "https://7star.in.net/hongkong/admin/api";
-// const USER_TYPE = "User";
+const BASE_URL = "https://api.singaporelottery.top";
 
+// const USER_TYPE = "User";
 
 
 function get(endpoint, params) {
