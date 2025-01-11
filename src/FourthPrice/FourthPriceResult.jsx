@@ -26,7 +26,6 @@ const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition, singleDr
     setCurrentResults(newResults);
     setIsRotating(true);
     audio.play();
-
     // Stop the slot machine and the audio after 10 seconds
     const stopRotationTimer = setTimeout(() => {
       setIsRotating(false);
