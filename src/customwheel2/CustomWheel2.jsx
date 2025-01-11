@@ -9,7 +9,7 @@ import Modal from "../Components/Modal/Modal";
 const wheelAudio = require("../assets/newSound/wheelspin.mp3");
 const slotAudio = require("../assets/newSound/slotsound.mp3")
 
-function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePosition }) {
+function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePosition, singleDrawTime, setShow }) {
   const [rotationAngleNumber, setRotationAngleNumber] = useState(0);
   const [rotationAngleLetter, setRotationAngleLetter] = useState(0);
   const [inputValueNumber, setInputValueNumber] = useState("");
@@ -28,23 +28,23 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
     setSlotWidth(true)
 
     const zoomTimer = setTimeout(() => {
-      // setZoomed("zoomed");
+      setZoomed("zoomed");
     }, 10200);
 
     const scrollLettersTimer = setTimeout(() => {
-      // if (letterWheelRef.current) {
-      //   letterWheelRef.current.scrollIntoView({ behavior: "smooth" });
-      // }
+      if (letterWheelRef.current) {
+        letterWheelRef.current.scrollIntoView({ behavior: "smooth" });
+      }
     }, 20000);
 
     const digitsTimer = setTimeout(() => {
-      // if (digitsRef.current) {
-      //   digitsRef.current.scrollIntoView({ behavior: "smooth" });
-      // }
+      if (digitsRef.current) {
+        digitsRef.current.scrollIntoView({ behavior: "smooth" });
+      }
     }, 23000);
 
     const changeState = setTimeout(() => {
-      // setStatus(false);
+      setStatus(false);
     }, 28500);
 
     return () => {
@@ -91,8 +91,8 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
       const numberWheelStyle = document.querySelector(".circle").style;
       const letterWheelStyle = document.querySelector(".letter-circle").style;
 
-      numberWheelStyle.transition = `transform 22s cubic-bezier(0.25, 1, 0.30, 1)`;
-      letterWheelStyle.transition = `transform 22s cubic-bezier(0.25, 1, 0.30, 1)`;
+      numberWheelStyle.transition = `transform 24s cubic-bezier(0.25, 1, 0.30, 1)`;
+      letterWheelStyle.transition = `transform 24s cubic-bezier(0.25, 1, 0.30, 1)`;
 
       setRotationAngleNumber(
         rotationAngleNumber + targetAngleNumber + randomFullRotations
@@ -210,7 +210,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           className="bg-black h-auto border-l-2 slot_component"
           ref={digitsRef}
         >
-          <SlotMechine duration={11} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} />
+          <SlotMechine duration={11} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} singleDrawTime={singleDrawTime}/>
         </div>
       </div>
 
@@ -233,11 +233,11 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           Spin
         </button>
       </div>
-    <Modal />
+    <Modal singleDrawTime={singleDrawTime}/>
     </div>
     </>
   ) : (
-    <SecoundPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} />
+    <SecoundPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} singleDrawTime={singleDrawTime} setShow={setShow}/>
   );
 }
 

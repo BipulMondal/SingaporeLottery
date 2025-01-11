@@ -10,9 +10,7 @@ import { useLocation } from "react-router-dom";
 // const beepSound = new Audio(
 //   require("../assets/piep-33489-[AudioTrimmer.com].mp3")
 // );
-const beepSound = new Audio(
-  require("../assets/newSound/beep3.mp3")
-);
+const beepSound = new Audio(require("../assets/newSound/beep3.mp3"));
 const countDown = new Audio(require("../assets/coundDown.mpeg"));
 
 const Main = () => {
@@ -29,6 +27,7 @@ const Main = () => {
   const [resultData, setResultData] = useState({});
   const [allTime, setAllTime] = useState([]);
   const [singleDrawTime, setSingleDrawTime] = useState("");
+  const [show, setShow] = useState(true);
 
   const fetchSpinData = useCallback(async () => {
     try {
@@ -84,8 +83,8 @@ const Main = () => {
             }
             return prevCount - 1;
           } else if (prevCount === 0) {
-            beepSound.play(); 
-            countDown.pause(); 
+            beepSound.play();
+            countDown.pause();
             clearInterval(interval);
             return 0;
           } else {
@@ -94,26 +93,26 @@ const Main = () => {
           }
         });
       }, 1200);
-  
+
       const fallingText = setTimeout(() => {
         setfallingText(true);
       }, 7000);
-  
+
       const changeColor = setTimeout(() => {
         setColor(true);
       }, 12500);
-  
+
       const Blink = setTimeout(() => {
         setBlink(true);
       }, 13000);
-  
+
       const changeState = setTimeout(() => {
         setStatus(true);
-        beepSound.pause(); 
-        countDown.pause(); 
+        beepSound.pause();
+        countDown.pause();
       }, 16000);
       // }, 76000);
-  
+
       return () => {
         clearInterval(interval);
         clearTimeout(fallingText);
@@ -123,7 +122,7 @@ const Main = () => {
       };
     }
   }, [home]);
-  
+
   const formattedCount = String(count).padStart(2, "0");
 
   return home ? (
@@ -134,18 +133,22 @@ const Main = () => {
         <p>PXWELL</p>
         <p>LIVE LOTTERY DRAW</p>
       </div>
-      <button
-        type="button"
-        class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2 me-2 mb-2  focus:outline-none dark:focus:ring-blue-800"
-        onClick={() => setHome(false)}
-      >
-        Play
-      </button>
+      {show ? (
+        <button
+          type="button"
+          class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2 me-2 mb-2  focus:outline-none dark:focus:ring-blue-800"
+          onClick={() => setHome(false)}
+        >
+          Play
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   ) : (
     <div className="main_div">
       {/* top */}
-      <div className="flex justify-around main_div_second pt-[0.5rem]">
+      <div className="flex justify-around main_div_second">
         <div className="pt-1 pb-1 flex justify-center align-center bg-black rounded rounded-full w-72 h-[56px] top_left_uTube">
           <p className="w-full text-center bg-yellow-400 text-black rounded rounded-full font-bold top_left">
             PLAY LIVE DRAW ON <span className="text-red-700">YOUTUBE</span>{" "}
@@ -250,7 +253,7 @@ const Main = () => {
             </div>
           </div>
         ) : (
-          <div className="w-[74vw] border border-2 overflow-hidden relative wheel_main_section">
+          <div className="w-[74vw] border overflow-hidden relative wheel_main_section">
             <CustomWheel2
               no={resultData?.pre_digit}
               letter={resultData.series}
@@ -258,6 +261,8 @@ const Main = () => {
               rotate={true}
               setLiveDraw={setLiveDraw}
               setPrizePosition={setPrizePosition}
+              singleDrawTime={singleDrawTime}
+              setShow={setShow}
             />
           </div>
         )}

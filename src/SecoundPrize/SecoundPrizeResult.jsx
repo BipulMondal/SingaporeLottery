@@ -9,7 +9,7 @@ import Modal from "../Components/Modal/Modal";
 // const audio = new Audio(require("../assets/New folder/slot1.mpeg"))
 const audio = new Audio(require("../assets/newSound/slotsound.mp3"))
 
-const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
+const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition, singleDrawTime, setShow }) => {
   const [status, setStatus] = useState(true);
 
   useEffect(() => {
@@ -54,10 +54,10 @@ const SecoundPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
             })}
         </div>
       </div>
-      <Modal />
+      <Modal singleDrawTime={singleDrawTime}/>
     </div>
   ) : (
-    <ThirdPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} />
+    <ThirdPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} singleDrawTime={singleDrawTime} setShow={setShow}/>
   );
 };
 

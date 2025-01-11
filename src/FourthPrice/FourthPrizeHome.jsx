@@ -3,7 +3,12 @@ import FourthPriceResult from "./FourthPriceResult";
 import { useLocation } from "react-router-dom";
 import { getFourthResultData } from "../Utils/AllApiCals";
 
-const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
+const FourthPrizeHome = ({
+  setLiveDraw,
+  setPrizePosition,
+  singleDrawTime,
+  setShow,
+}) => {
   const [textType, setTextType] = useState(false);
   const [textFall, setTextFall] = useState(false);
   const [showLine, setShowLine] = useState(false);
@@ -13,16 +18,14 @@ const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
   const [resultData, setResultData] = useState([]);
   const location = useLocation();
   const data = location.state.row || {};
-  const beepSound = new Audio(
-    require("../assets/newSound/pxwellbeep.mp3")
-  );
+  const beepSound = new Audio(require("../assets/newSound/pxwellbeep.mp3"));
 
   const fetchThirdResult = useCallback(async () => {
     try {
       let res = await getFourthResultData(data.game_date, data.game_name);
       if (res && res.status) {
         if (res && res.status) {
-          let filterData = res?.data?.map((item) => item['5thresult']);
+          let filterData = res?.data?.map((item) => item["5thresult"]);
           setResultData(filterData);
         }
       }
@@ -58,12 +61,12 @@ const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
     }, 6500);
 
     const playSound = setTimeout(() => {
-      beepSound.play()
-    },35000)
+      beepSound.play();
+    }, 35000);
 
     const changeStatus = setTimeout(() => {
       setStatus(false);
-      beepSound.pause()
+      beepSound.pause();
     }, 36000);
 
     return () => {
@@ -105,8 +108,14 @@ const FourthPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
       </dib>
     </div>
   ) : (
-    <FourthPriceResult setLiveDraw={setLiveDraw} resultData={resultData} setPrizePosition={setPrizePosition} />
-  )
-}
+    <FourthPriceResult
+      setLiveDraw={setLiveDraw}
+      resultData={resultData}
+      setPrizePosition={setPrizePosition}
+      singleDrawTime={singleDrawTime}
+      setShow={setShow}
+    />
+  );
+};
 
-export default FourthPrizeHome
+export default FourthPrizeHome;

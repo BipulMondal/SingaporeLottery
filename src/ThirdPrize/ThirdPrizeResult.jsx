@@ -5,14 +5,20 @@ import Modal from "../Components/Modal/Modal";
 // const audio = new Audio(
 //   require("../../src/assets/bicycle-wheel-spinning-49716-[AudioTrimmer.com].mp3")
 // );
-const audio = new Audio(require("../assets/newSound/slotsound.mp3"))
+const audio = new Audio(require("../assets/newSound/slotsound.mp3"));
 
-const ThirdPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
+const ThirdPrizeResult = ({
+  setLiveDraw,
+  resultData,
+  setPrizePosition,
+  singleDrawTime,
+  setShow,
+}) => {
   const [status, setStatus] = useState(true);
 
   useEffect(() => {
     setLiveDraw(true);
-    setPrizePosition("3rd")
+    setPrizePosition("3rd");
   }, [setLiveDraw, setPrizePosition]);
 
   useEffect(() => {
@@ -53,10 +59,15 @@ const ThirdPrizeResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
             })}
         </div>
       </div>
-      <Modal />
+      <Modal singleDrawTime={singleDrawTime} />
     </div>
   ) : (
-    <FourthPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} />
+    <FourthPrizeHome
+      setLiveDraw={setLiveDraw}
+      setPrizePosition={setPrizePosition}
+      singleDrawTime={singleDrawTime}
+      setShow={setShow}
+    />
   );
 };
 

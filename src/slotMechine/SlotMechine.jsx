@@ -4,7 +4,6 @@ import SlotCounter from "react-slot-counter";
 // const audio = require("../../src/assets/wheel-spin-click-slow-down-101152.mp3");
 const SlotMechine = ({ duration, endNumbers, rotate, fourth, slotWidth }) => {
   const [isspinn, setisSpinn] = useState(false);
-  console.log("slotWidth", slotWidth);
   const counterRef = useRef(null);
 
   const startAnimation = useCallback(() => {

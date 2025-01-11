@@ -3,7 +3,7 @@ import SecoundPrizeResult from "./SecoundPrizeResult";
 import { useLocation } from "react-router-dom";
 import { getSecoundThirdResult } from "../Utils/AllApiCals";
 
-const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
+const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition, singleDrawTime, setShow }) => {
   const [textType, setTextType] = useState(false);
   const [textFall, setTextFall] = useState(false);
   const [showLine, setShowLine] = useState(false);
@@ -104,7 +104,7 @@ const SecoundPrizeHome = ({ setLiveDraw, setPrizePosition }) => {
       </div>
     </div>
   ) : (
-    <SecoundPrizeResult setLiveDraw={setLiveDraw} resultData={resultData} setPrizePosition={setPrizePosition} />
+    <SecoundPrizeResult setLiveDraw={setLiveDraw} resultData={resultData} setPrizePosition={setPrizePosition} singleDrawTime={singleDrawTime} setShow={setShow}/>
   );
 };
 

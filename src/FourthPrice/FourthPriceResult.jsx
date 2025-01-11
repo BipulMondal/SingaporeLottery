@@ -1,22 +1,27 @@
 import React, { useCallback, useEffect, useState } from "react";
 import SlotMechine from "../slotMechine/SlotMechine";
 import Modal from "../Components/Modal/Modal";
+import Main from "../first/Main";
 
 const audio = new Audio(require("../assets/newSound/slotsound.mp3"))
 
-const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
+const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition, singleDrawTime, setShow}) => {
   // const [currentBatch, setCurrentBatch] = useState(0); // To track which batch is being displayed
   const [currentResults, setCurrentResults] = useState([]);
   const [isRotating, setIsRotating] = useState(false);
+  const [status, setStatus] = useState(true);
 
   useEffect(() => {
     setLiveDraw(true);
     setPrizePosition("4th");
   }, [setLiveDraw, setPrizePosition]);
+
   const showResults = useCallback((batchIndex) => {
     const start = batchIndex * 20;
     const end = start + 20;
     const newResults = resultData.slice(start, end);
+
+    console.log("resultData", resultData)
 
     setCurrentResults(newResults);
     setIsRotating(true);
@@ -33,24 +38,30 @@ const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
           // setCurrentBatch(batchIndex + 1);
           showResults(batchIndex + 1);
         }, 6000);
+      }else{
+        setTimeout(() => {
+          setShow(false)
+          setStatus(false);
+        }, 9000);
       }
-    }, 6000); // 10 seconds duration
+    }, 6000); 
 
-    // Cleanup the timer when the component unmounts
+ 
     return () => {
       clearTimeout(stopRotationTimer);
     };
   }, [resultData]);
+
+
   useEffect(() => {
     if (resultData?.length > 0) {
-      // Start with the first batch
       showResults(0);
     }
   }, [resultData, showResults]);
 
 
 
-  return (
+  return status ? (
     <div className="fourth_result relative">
       <div className="bg-black h-[79vh] border-l-2 ">
         <div className="fourth_inner">
@@ -70,9 +81,13 @@ const FourthPriceResult = ({ setLiveDraw, resultData, setPrizePosition }) => {
             })}
         </div>
       </div>
-      <Modal />
+      <Modal singleDrawTime={singleDrawTime}/>
     </div>
-  );
+  ):(
+    <div className="fixed inset-0 z-10">
+      <Main setShow={setShow}/>
+    </div>
+  )
 };
 
 export default FourthPriceResult;
