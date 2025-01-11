@@ -9,7 +9,7 @@ import Modal from "../Components/Modal/Modal";
 const wheelAudio = require("../assets/newSound/wheelspin.mp3");
 const slotAudio = require("../assets/newSound/slotsound.mp3")
 
-function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePosition, singleDrawTime, setShow }) {
+function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePosition, singleDrawTime }) {
   const [rotationAngleNumber, setRotationAngleNumber] = useState(0);
   const [rotationAngleLetter, setRotationAngleLetter] = useState(0);
   const [inputValueNumber, setInputValueNumber] = useState("");
@@ -133,7 +133,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
         <div className="w-[27%] h-full bg-gray-300 flex flex-col justify-between main_spin pb-[25px]">
           <div className="relative">
             <div className="w-full h-1 bg-white spin_top_line">
-              <hr className="h-1.5 border border-2 border-black overflow-auto circle_hr" />
+              <hr className="h-1.5 border lg:border-2 border-black overflow-auto circle_hr" />
             </div>
             <div className="arrow"></div>
 
@@ -210,7 +210,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           className="bg-black h-auto border-l-2 slot_component"
           ref={digitsRef}
         >
-          <SlotMechine duration={11} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} singleDrawTime={singleDrawTime}/>
+          <SlotMechine duration={9} endNumbers={endval} setvalueStart rotate slotWidth={slotWidth} singleDrawTime={singleDrawTime}/>
         </div>
       </div>
 
@@ -233,11 +233,10 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
           Spin
         </button>
       </div>
-    <Modal singleDrawTime={singleDrawTime}/>
     </div>
     </>
   ) : (
-    <SecoundPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} singleDrawTime={singleDrawTime} setShow={setShow}/>
+    <SecoundPrizeHome setLiveDraw={setLiveDraw} setPrizePosition={setPrizePosition} singleDrawTime={singleDrawTime}/>
   );
 }
 

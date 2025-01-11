@@ -12,7 +12,6 @@ const ThirdPrizeResult = ({
   resultData,
   setPrizePosition,
   singleDrawTime,
-  setShow,
 }) => {
   const [status, setStatus] = useState(true);
 
@@ -59,14 +58,12 @@ const ThirdPrizeResult = ({
             })}
         </div>
       </div>
-      <Modal singleDrawTime={singleDrawTime} />
     </div>
   ) : (
     <FourthPrizeHome
       setLiveDraw={setLiveDraw}
       setPrizePosition={setPrizePosition}
       singleDrawTime={singleDrawTime}
-      setShow={setShow}
     />
   );
 };

@@ -437,7 +437,7 @@
   height: 100%;
   width: 100%;
   background: #000;
-  animation: typesBottom 6.5s steps(45) forwards infinite;
+  animation: typesBottom 3.5s steps(45) forwards infinite;
 }
 @keyframes typesBottom {
   0% {

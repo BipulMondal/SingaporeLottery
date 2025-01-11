@@ -7,7 +7,6 @@ const FourthPrizeHome = ({
   setLiveDraw,
   setPrizePosition,
   singleDrawTime,
-  setShow,
 }) => {
   const [textType, setTextType] = useState(false);
   const [textFall, setTextFall] = useState(false);
@@ -113,7 +112,6 @@ const FourthPrizeHome = ({
       resultData={resultData}
       setPrizePosition={setPrizePosition}
       singleDrawTime={singleDrawTime}
-      setShow={setShow}
     />
   );
 };

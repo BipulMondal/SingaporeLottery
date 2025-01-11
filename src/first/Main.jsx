@@ -1,22 +1,21 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import "./Main.css";
 import middle from "../images/draw_img.png";
-// import first from "../images/first.png";
 import logo from "../images/lottery_logo.png";
 import prize from "../images/prize.png";
 import CustomWheel2 from "../customwheel2/CustomWheel2";
 import { getAllTime, getFirstResult, getSingleTime } from "../Utils/AllApiCals";
 import { useLocation } from "react-router-dom";
-// const beepSound = new Audio(
-//   require("../assets/piep-33489-[AudioTrimmer.com].mp3")
-// );
+import { AppContext } from "../Context/AppContext";
+import Modal from "../Components/Modal/Modal";
+
 const beepSound = new Audio(require("../assets/newSound/beep3.mp3"));
 const countDown = new Audio(require("../assets/coundDown.mpeg"));
 
 const Main = () => {
   const location = useLocation();
   const data = location.state.row || {};
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(60);
   const [status, setStatus] = useState(false);
   const [color, setColor] = useState(false);
   const [fallingText, setfallingText] = useState(false);
@@ -27,7 +26,7 @@ const Main = () => {
   const [resultData, setResultData] = useState({});
   const [allTime, setAllTime] = useState([]);
   const [singleDrawTime, setSingleDrawTime] = useState("");
-  const [show, setShow] = useState(true);
+  const {show, setShow} = useContext(AppContext)
 
   const fetchSpinData = useCallback(async () => {
     try {
@@ -78,9 +77,9 @@ const Main = () => {
         setCount((prevCount) => {
           if (prevCount > 0) {
             // countDown.play();
-            if (prevCount <= 10) {
-              countDown.play(); // Start countdown sound when count is 10 or less
-            }
+            // if (prevCount <= 10) {
+            //   countDown.play(); // Start countdown sound when count is 10 or less
+            // }
             return prevCount - 1;
           } else if (prevCount === 0) {
             beepSound.play();
@@ -110,8 +109,8 @@ const Main = () => {
         setStatus(true);
         beepSound.pause();
         countDown.pause();
-      }, 16000);
-      // }, 76000);
+      // }, 16000);
+      }, 76000);
 
       return () => {
         clearInterval(interval);
@@ -122,6 +121,14 @@ const Main = () => {
       };
     }
   }, [home]);
+
+  const handleClick = () => {
+    setShow(false);
+    setTimeout(() => {
+      setHome(false); 
+    }, 60000); 
+  };
+
 
   const formattedCount = String(count).padStart(2, "0");
 
@@ -137,7 +144,7 @@ const Main = () => {
         <button
           type="button"
           class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2 me-2 mb-2  focus:outline-none dark:focus:ring-blue-800"
-          onClick={() => setHome(false)}
+          onClick={() => handleClick()}
         >
           Play
         </button>
@@ -146,11 +153,11 @@ const Main = () => {
       )}
     </div>
   ) : (
-    <div className="main_div">
+    <div className="main_div relative">
       {/* top */}
       <div className="flex justify-around main_div_second">
-        <div className="pt-1 pb-1 flex justify-center align-center bg-black rounded rounded-full w-72 h-[56px] top_left_uTube">
-          <p className="w-full text-center bg-yellow-400 text-black rounded rounded-full font-bold top_left">
+        <div className="pt-1 pb-1 flex justify-center align-center bg-black  rounded-full w-72 h-[56px] top_left_uTube">
+          <p className="w-full text-center bg-yellow-400 text-black  rounded-full font-bold top_left">
             PLAY LIVE DRAW ON <span className="text-red-700">YOUTUBE</span>{" "}
             <br />
             SINGAPORE LOTTERIES{" "}
@@ -213,9 +220,8 @@ const Main = () => {
             <div className="fall_blink_text ">
               <h4 className="text-9xl font-extrabold mt-8 mb-8 blink_text ">
                 <div
-                  className={`word ${fallingText ? "block" : "hidden"} ${
-                    color ? "colorChange" : ""
-                  } ${blink ? "blink" : ""}`}
+                  className={`word ${fallingText ? "block" : "hidden"} ${color ? "colorChange" : ""
+                    } ${blink ? "blink" : ""}`}
                 >
                   <span>P</span>
                   <span>X</span>
@@ -232,9 +238,8 @@ const Main = () => {
                 className={`h-[81px] w-24 bg-white text-black text-7xl count_number`}
               >
                 <span
-                  className={`${
-                    formattedCount === "00" ? (blink ? "blink" : "") : ""
-                  }`}
+                  className={`${formattedCount === "00" ? (blink ? "blink" : "") : ""
+                    }`}
                 >
                   00
                 </span>
@@ -243,9 +248,8 @@ const Main = () => {
                 className={`h-[81px] w-24 bg-white text-black text-7xl ml-2 count_number`}
               >
                 <span
-                  className={`${
-                    formattedCount === "00" ? (blink ? "blink" : "") : ""
-                  }`}
+                  className={`${formattedCount === "00" ? (blink ? "blink" : "") : ""
+                    }`}
                 >
                   {formattedCount}
                 </span>
@@ -262,20 +266,10 @@ const Main = () => {
               setLiveDraw={setLiveDraw}
               setPrizePosition={setPrizePosition}
               singleDrawTime={singleDrawTime}
-              setShow={setShow}
             />
           </div>
         )}
 
-        {/* <div className="curve w-2/12 bg-red-600 ml-1 flex flex-col justify-center items-center">
-          <img src={first} className="h-16 w-16" alt="first" />
-          <p className="text-teal-200 font-extrabold text-5xl">prize</p>
-          <p className="prize font-bold text-3xl ">ON</p>
-          <p className="prize font-bold text-3xl ">5</p>
-          <p className="prize font-bold text-3xl ">DIGITS</p>
-          <p className="prize font-bold text-3xl ">WITH</p>
-          <p className="prize font-bold text-3xl ">SERIES</p>
-        </div> */}
         <div className="oval_div">
           <div className="prize">
             <div className="first">
@@ -322,6 +316,8 @@ const Main = () => {
           </p>
         </div>
       </div>
+
+      <Modal singleDrawTime={singleDrawTime}/>
     </div>
   );
 };
