@@ -45,8 +45,8 @@ const SlotMechine = ({ duration, endNumbers, rotate, fourth, slotWidth }) => {
           <span>PXWELL</span>
           <hr className="dot" />
         </div>
-        <div className="bg-gray-300 w-[92%] mx-auto flex justify-center  p-[12px] slot_main_div">
-          <div className="bg-gray-500 bg_gray_div">
+        <div className="bg-gray-300 w-[66%]  mx-auto flex justify-center  p-[12px] slot_main_div">
+          <div className="bg-[#bfbfbf] bg_gray_div">
             <SlotCounter
               ref={counterRef}
               startValue={staticStartVal}

@@ -67,3 +67,32 @@
 .slotWidth {
   width: 35%;
 }
+.slot_main_div {
+  position: relative;
+}
+
+.slot_main_div:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 32px;
+  border-top: 8px solid transparent;
+  border-left: 10px solid #919993;
+  border-bottom: 8px solid transparent;
+  left: 0px;
+  top: -0.4px;
+}
+.slot_main_div:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 32px;
+  border-top: 8px solid transparent;
+  border-right: 10px solid #919993;
+  border-bottom: 8px solid transparent;
+  right: 0px;
+  top: -0.4px;
+}
+.bg_gray_div {
+  padding: 0 5px;
+}

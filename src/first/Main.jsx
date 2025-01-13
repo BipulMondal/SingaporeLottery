@@ -15,7 +15,7 @@ const countDown = new Audio(require("../assets/coundDown.mpeg"));
 const Main = () => {
   const location = useLocation();
   const data = location.state.row || {};
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(60);
   const [status, setStatus] = useState(false);
   const [color, setColor] = useState(false);
   const [fallingText, setfallingText] = useState(false);
@@ -109,8 +109,8 @@ const Main = () => {
         setStatus(true);
         beepSound.pause();
         countDown.pause();
-      }, 6000);
-      // }, 76000);
+      // }, 6000);
+      }, 76000);
 
       return () => {
         clearInterval(interval);

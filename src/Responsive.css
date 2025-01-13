@@ -833,7 +833,7 @@
   /*********** slot machine ***************/
  
   .slotWidth {
-    width: 43%;
+    width: 40%;
     height: 19%;
   }
   .slot_main_div {
@@ -860,21 +860,21 @@
     height: 35px;
   }
   .index-module_num__j6XH3 {
-    font-size: 14px;
+    font-size: 18px;
     height: 35px;
     width: 0.813rem;
-    line-height: 1.188rem;
+    line-height: 0.9rem;
   }
   .index-module_slot__DpPgW:nth-child(1) {
     margin-left: 0 !important;
   }
   .index-module_slot__DpPgW {
-    height: 21px !important;
+    height: 16px !important;
     margin-left: 5px !important;
-    margin-top: -0.438rem;
+    margin-top: -0.738rem;
   }
   .bg_gray_div {
-    height: 1.3rem;
+    height: 1rem;
   }
   /***** end of slot machine *******/
 

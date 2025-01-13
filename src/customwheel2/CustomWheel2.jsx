@@ -44,7 +44,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
     }, 23000);
 
     const changeState = setTimeout(() => {
-      // setStatus(false);
+      setStatus(false);
     }, 28500);
 
     return () => {
