@@ -199,6 +199,7 @@
 
   .index-module_num__j6XH3 {
     height: 35px;
+    width: 0.813rem;
     line-height: 33px;
     /* font-size: 15px;  its work for small screen */
     font-size: 8px;
@@ -470,6 +471,7 @@
 
   .index-module_num__j6XH3 {
     height: 26px;
+    width: 0.813rem;
     line-height: 20px;
     font-size: 8px;
   }
@@ -590,7 +592,7 @@
     width: 75% !important;
   }
   .index-module_num__j6XH3 {
-    font-size: 10px !important;
+    font-size: 22px !important;
   }
   .slot_machine_top {
     height: 53px !important;
@@ -671,6 +673,9 @@
 }
 
 @media only screen and (min-width: 660px) and (max-width: 932px) and (orientation: landscape) {
+  .index-module_numbers__sqlqm{
+    width: 0.770rem;
+  }
   .home_text {
     font-size: 35px;
     -webkit-text-stroke: initial;
@@ -832,7 +837,7 @@
     height: 19%;
   }
   .slot_main_div {
-    padding: 3px;
+    padding: 8px;
     height: auto;
   }
   .zoomed {
@@ -857,17 +862,19 @@
   .index-module_num__j6XH3 {
     font-size: 14px;
     height: 35px;
-    line-height: 33px;
+    width: 0.813rem;
+    line-height: 1.188rem;
   }
   .index-module_slot__DpPgW:nth-child(1) {
     margin-left: 0 !important;
   }
   .index-module_slot__DpPgW {
-    height: 30px !important;
+    height: 21px !important;
     margin-left: 5px !important;
+    margin-top: -0.438rem;
   }
   .bg_gray_div {
-    height: 30px;
+    height: 1.3rem;
   }
   /***** end of slot machine *******/
 

@@ -44,7 +44,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
     }, 23000);
 
     const changeState = setTimeout(() => {
-      setStatus(false);
+      // setStatus(false);
     }, 28500);
 
     return () => {
@@ -171,7 +171,7 @@ function CustomWheel2({ no, letter, digits, rotate, setLiveDraw, setPrizePositio
 
           <div className="relative mb-[75px]" ref={letterWheelRef}>
             <div className="w-full h-1 bg-white z-20 spin_top_line">
-              <hr className="h-1.5 border border-2 border-black overflow-auto circle_hr" />
+              <hr className="h-1.5 border-2 border-black overflow-auto circle_hr" />
             </div>
             <div className="letter_Arrow"></div>
 
