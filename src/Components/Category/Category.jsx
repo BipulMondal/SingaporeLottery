@@ -378,7 +378,7 @@ function Category({ gameTime }) {
 
   return (
     <>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <section className="mt-4">
         <div className="border-b-4 border-solid border-indigo-500 ">
           <div className="">
