@@ -166,7 +166,7 @@ const Main = () => {
         <div className="">
           <div class="draw">
             <img src={middle} alt="middle" />
-            <h2 className="draw_text1">SINGAPORE LOTTERIES</h2>
+            <h2 className="draw_text1">SINGAPORE{" "}{" "} LOTTERIES</h2>
             <h3 className="draw_text2">
               DRAW TIME{" "}
               {allTime.map((ele, id) => {
@@ -317,7 +317,7 @@ const Main = () => {
         </div>
       </div>
 
-      <Modal singleDrawTime={singleDrawTime}/>
+      {/* <Modal singleDrawTime={singleDrawTime}/> */}
     </div>
   );
 };

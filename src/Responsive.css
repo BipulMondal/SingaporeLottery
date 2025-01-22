@@ -710,8 +710,9 @@
     margin-top: 6px;
   }
   .draw_text1 {
-    font-size: 13px;
-    bottom: 21px;
+    font-size: 23px;
+    bottom: 12px;
+    letter-spacing: 1.5px;
   }
   .draw img {
     width: 370px;
