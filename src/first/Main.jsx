@@ -317,7 +317,7 @@ const Main = () => {
         </div>
       </div>
 
-      {/* <Modal singleDrawTime={singleDrawTime}/> */}
+      <Modal singleDrawTime={singleDrawTime}/>
     </div>
   );
 };
